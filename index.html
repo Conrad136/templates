@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visual Care Task Templates</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: #f0f2f5;
+      color: #1a1a2e;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      color: #fff;
+      padding: 32px 0 28px;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-container {
+      max-width: 900px;
+      margin: 28px auto 0;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .nav-row {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px 24px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+
+    .nav-row h2 {
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #16213e;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #e8e8e8;
+      padding-bottom: 8px;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .nav-links a {
+      display: inline-block;
+      padding: 8px 16px;
+      background: #eef1f7;
+      color: #16213e;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .nav-links a:hover {
+      background: #d0d7e6;
+      transform: translateY(-1px);
+    }
+
+    .templates-container {
+      max-width: 900px;
+      margin: 32px auto 60px;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .template-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+
+    .template-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 24px;
+      background: #16213e;
+      color: #fff;
+    }
+
+    .template-header h3 {
+      font-size: 17px;
+      font-weight: 600;
+    }
+
+    .copy-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 16px;
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+
+    .copy-btn:hover {
+      background: rgba(255,255,255,0.25);
+    }
+
+    .copy-btn.copied {
+      background: #27ae60;
+      border-color: #27ae60;
+    }
+
+    .copy-btn svg {
+      width: 15px;
+      height: 15px;
+    }
+
+    .template-body {
+      padding: 20px 24px;
+    }
+
+    .template-body .field {
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    .template-body .field-label {
+      font-weight: 600;
+      color: #16213e;
+    }
+
+    .template-body .field-hint {
+      color: #666;
+      font-style: italic;
+    }
+
+    .template-body .section-note {
+      margin-top: 4px;
+      margin-bottom: 8px;
+      padding: 8px 12px;
+      background: #fef9e7;
+      border-left: 3px solid #f1c40f;
+      border-radius: 4px;
+      font-size: 13px;
+      color: #7d6608;
+    }
+
+    .important-section {
+      margin-top: 14px;
+      border: 1px solid #f0d0d0;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .important-toggle {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+      padding: 10px 14px;
+      background: #fdf0f0;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 700;
+      color: #c0392b;
+      text-align: left;
+      transition: background 0.2s;
+    }
+
+    .important-toggle:hover {
+      background: #fbe3e3;
+    }
+
+    .important-toggle .chevron {
+      transition: transform 0.25s;
+      font-size: 12px;
+    }
+
+    .important-toggle.open .chevron {
+      transform: rotate(90deg);
+    }
+
+    .important-content {
+      display: none;
+      padding: 12px 14px 14px;
+      background: #fff8f8;
+    }
+
+    .important-content.visible {
+      display: block;
+    }
+
+    .important-subheading {
+      font-size: 13px;
+      font-weight: 700;
+      color: #c0392b;
+      margin: 12px 0 6px;
+    }
+
+    .important-subheading:first-child {
+      margin-top: 0;
+    }
+
+    .important-text {
+      font-size: 13px;
+      color: #333;
+      margin-bottom: 6px;
+      line-height: 1.5;
+    }
+
+    .important-text.muted {
+      color: #666;
+      font-style: italic;
+    }
+
+    .important-numbered-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #444;
+      margin: 10px 0 4px;
+    }
+
+    .important-content ul {
+      margin: 0;
+      padding-left: 20px;
+      list-style: disc;
+    }
+
+    .important-content li {
+      font-size: 13px;
+      color: #333;
+      margin-bottom: 6px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 22px; }
+      .nav-links { flex-direction: column; }
+      .template-header { flex-direction: column; gap: 10px; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Visual Care Task Templates</h1>
+</header>
+
+<!-- Navigation -->
+<div class="nav-container">
+  <div class="nav-row">
+    <h2>Rostering Templates</h2>
+    <div class="nav-links">
+      <a href="#new-service-request">New Service Request</a>
+      <a href="#cancellation">Cancellation</a>
+      <a href="#service-reschedule">Service Reschedule</a>
+    </div>
+  </div>
+  <div class="nav-row">
+    <h2>Onboarding Templates</h2>
+    <div class="nav-links">
+      <a href="#onboarding-service-provider">Onboarding Request (Service Provider)</a>
+      <a href="#onboarding-employee">Onboarding Request (Employee)</a>
+    </div>
+  </div>
+</div>
+
+<!-- Templates -->
+<div class="templates-container">
+
+  <!-- 1. New Service Request -->
+  <div class="template-card" id="new-service-request">
+    <div class="template-header">
+      <h3>New Service Request</h3>
+      <button class="copy-btn" onclick="copyTemplate(this)">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+        <span>Copy</span>
+      </button>
+    </div>
+    <div class="template-body" data-template>
+      <div class="field"><span class="field-label">SERVICE TYPE:</span></div>
+      <div class="field"><span class="field-label">SPLIT SHIFT:</span> Yes or No</div>
+      <div class="field"><span class="field-label">DAY OF SERVICE:</span></div>
+      <div class="field"><span class="field-label">FREQUENCY:</span></div>
+      <div class="field"><span class="field-label">COMMENCEMENT DATE:</span></div>
+      <div class="field"><span class="field-label">SHIFT NOTES:</span> <span class="field-hint">Please put what tasks needs to be accomplished to be included on the shift note when creating shifts.</span></div>
+      <div class="field"><span class="field-label">ROSTER NOTES:</span></div>
+      <div class="field"><span class="field-label">Client preference for day and time (indicative):</span></div>
+      <div class="field"><span class="field-label">Client's or CM's preference for worker:</span></div>
+      <div class="field"><span class="field-label">CONTACT PERSON FOR COMMUNICATION:</span></div>
+      <div class="section-note">ASSIGN TO: Rostering Team</div>
+    </div>
+  </div>
+
+  <!-- 2. Cancellation -->
+  <div class="template-card" id="cancellation">
+    <div class="template-header">
+      <h3>Cancellation</h3>
+      <button class="copy-btn" onclick="copyTemplate(this)">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+        <span>Copy</span>
+      </button>
+    </div>
+    <div class="template-body" data-template>
+      <div class="field"><span class="field-label">SERVICE TYPE:</span></div>
+      <div class="field"><span class="field-label">DATE or DATE RANGE (once off or ongoing):</span></div>
+      <div class="field"><span class="field-label">REASON:</span> <span class="field-hint">reason, plus when was the call received and who notified</span></div>
+      <div class="section-note">ASSIGN TO: Rostering Team â Mark URGENT</div>
+    </div>
+  </div>
+
+  <!-- 3. Service Reschedule -->
+  <div class="template-card" id="service-reschedule">
+    <div class="template-header">
+      <h3>Service Reschedule</h3>
+      <button class="copy-btn" onclick="copyTemplate(this)">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+        <span>Copy</span>
+      </button>
+    </div>
+    <div class="template-body" data-template>
+      <div class="field"><span class="field-label">SERVICE TYPE:</span></div>
+      <div class="field"><span class="field-label">CHANGE REQUIRED:</span></div>
+      <div class="field"><span class="field-label">SHIFT NOTES:</span> <span class="field-hint">Please put what tasks needs to be accomplished to be included on the note when creating shifts (if a different service).</span></div>
+      <div class="field"><span class="field-label">ROSTER NOTES:</span></div>
+      <div class="field"><span class="field-label">Client preference for day and time (indicative):</span></div>
+      <div class="field"><span class="field-label">Client's or CM's preference for worker:</span></div>
+      <div class="field"><span class="field-label">CONTACT PERSON FOR COMMUNICATION:</span></div>
+      <div class="section-note">ASSIGN TO: Rostering Team</div>
+    </div>
+  </div>
+
+  <!-- 4. Onboarding Request (Service Provider) -->
+  <div class="template-card" id="onboarding-service-provider">
+    <div class="template-header">
+      <h3>Onboarding Request (Service Provider)</h3>
+      <button class="copy-btn" onclick="copyTemplate(this)">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+        <span>Copy</span>
+      </button>
+    </div>
+    <div class="template-body" data-template>
+      <div class="field"><span class="field-label">Region:</span> <span class="field-hint">Sydney/Melb/Newcastle</span></div>
+      <div class="field"><span class="field-label">Client Name:</span> <span class="field-hint">(which client will they be supporting)</span></div>
+      <div class="field"><span class="field-label">Business Name (if applicable):</span></div>
+      <div class="field"><span class="field-label">Business Type:</span> <span class="field-hint">ABN/ACN (are they operating under an ABN or ACN)</span></div>
+      <div class="field"><span class="field-label">Primary Contact:</span></div>
+      <div class="field"><span class="field-label">Phone:</span></div>
+      <div class="field"><span class="field-label">Email:</span></div>
+      <div class="field"><span class="field-label">Service Sector:</span> <span class="field-hint">NDIS/SAH/Both</span></div>
+      <div class="field"><span class="field-label">Service Type:</span> <span class="field-hint">Self-Managed/Provider-Managed</span></div>
+      <div class="field"><span class="field-label">Services Provided:</span> <span class="field-hint">(e.g. cleaning, AT&amp;HM, gardening, SW, RN, etc.)</span></div>
+      <div class="field"><span class="field-label">Working with Children:</span> Y/N</div>
+      <div class="field"><span class="field-label">Driving Required:</span> <span class="field-hint">Y/N (Is driving a requirement for this service provider)</span></div>
+      <div class="field"><span class="field-label">Approval Gained:</span> <span class="field-hint">Y/N (For provider-managed services, approval must be obtained from Aneta for SAH or Harry for NDIS)</span></div>
+      <div class="field"><span class="field-label">Pricing (provider-managed only):</span> <span class="field-hint">Please provide the service rate, noting whether it is a flat rate or varies by day/time (e.g. weekdays, weekends, public holidays) and etc.</span></div>
+      <div class="field"><span class="field-label">Additional Comments:</span></div>
+      <div class="section-note">ASSIGN TO: Compliance Team</div>
+      <div class="important-section">
+        <button class="important-toggle" onclick="toggleImportant(this)">
+          <span class="chevron">&#9654;</span> Important (Please Read)
+        </button>
+        <div class="important-content">
+          <h4 class="important-subheading">When to Use This Template</h4>
+          <p class="important-text">Use this onboarding request template only when a service provider is <strong>sourced directly</strong> by a Care Partner (SAH) or Service Manager (NDIS), rather than through the Recruitment team.</p>
+          <p class="important-text muted">A service provider is any individual or organisation engaged to deliver services that is not directly employed â including independent contractors, sole traders, and subcontracted workers.</p>
+
+          <h4 class="important-subheading">Implementation</h4>
+
+          <p class="important-numbered-title">1. Self-Managed Services (SAH only â not applicable to NDIS)</p>
+          <ul>
+            <li>Care Partners must ensure that services <strong>MUST NOT</strong> commence until onboarding is fully completed.</li>
+            <li>The compliance team will complete the onboarding and notify the relevant Care Partner once onboarding is finalised.</li>
+            <li>Services may only commence after confirmation from the compliance team.</li>
+          </ul>
+
+          <p class="important-numbered-title">2. Provider Managed Services (Applicable to SAH &amp; NDIS)</p>
+          <ul>
+            <li>Care Partners/Case Managers should prioritise using existing approved resources wherever possible before sourcing new ones.</li>
+            <li>All new resources must be approved prior to onboarding:
+              <ul>
+                <li>Home Care (Melbourne &amp; Sydney): approval required from Aneta</li>
+                <li>NDIS: approval required from Harry</li>
+              </ul>
+            </li>
+            <li>If a new resource is identified: proposed pricing must not exceed 80% of standard rates, using the current home care price list. For NDIS, use the pricing guide. Exceptions can be made but must be approved by Aneta or Harry.</li>
+            <li>Care Partners/Case Managers must confirm approval directly with the relevant approver before submitting any onboarding request.</li>
+            <li>Once approval is obtained, proceed to creating a task on Visual Care.</li>
+            <li>The Compliance team will complete onboarding and notify the relevant Care Partner/Case Manager once finalised. Services <strong>MUST NOT</strong> commence until onboarding is fully completed.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. Onboarding Request (Employee) -->
+  <div class="template-card" id="onboarding-employee">
+    <div class="template-header">
+      <h3>Onboarding Request (Employee)</h3>
+      <button class="copy-btn" onclick="copyTemplate(this)">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+        <span>Copy</span>
+      </button>
+    </div>
+    <div class="template-body" data-template>
+      <div class="field"><span class="field-label">Region:</span> <span class="field-hint">Sydney/Melb/Newcastle</span></div>
+      <div class="field"><span class="field-label">Client Name:</span></div>
+      <div class="field"><span class="field-label">Employee Full Name:</span></div>
+      <div class="field"><span class="field-label">Phone:</span></div>
+      <div class="field"><span class="field-label">Email:</span></div>
+      <div class="field"><span class="field-label">Service Sector:</span> <span class="field-hint">NDIS/SAH/Both</span></div>
+      <div class="field"><span class="field-label">Services Provided:</span> <span class="field-hint">(e.g. support work, nursing, allied health, etc.)</span></div>
+      <div class="field"><span class="field-label">Working with Children:</span> Y/N</div>
+      <div class="field"><span class="field-label">Driving Required:</span> Y/N</div>
+      <div class="field"><span class="field-label">Pay Rate:</span></div>
+      <div class="field"><span class="field-label">Additional Comments:</span></div>
+      <div class="section-note">ASSIGN TO: Compliance Team</div>
+      <div class="important-section">
+        <button class="important-toggle" onclick="toggleImportant(this)">
+          <span class="chevron">&#9654;</span> Important (Please Read)
+        </button>
+        <div class="important-content">
+          <ul>
+            <li>If onboarding for a specific client, enter the client name. If onboarding without a client, write "Area Hiring."</li>
+            <li>List the proposed base rate only â the recruitment team will calculate all penalty rates (weekday PM &amp; Night, Saturday, Sunday, public holiday). If left blank, the recruitment team will liaise with the candidate directly.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function copyTemplate(btn) {
+    const body = btn.closest('.template-card').querySelector('[data-template]');
+    const lines = [];
+    body.querySelectorAll('.field').forEach(field => {
+      const label = field.querySelector('.field-label');
+      const hint = field.querySelector('.field-hint');
+      let line = label ? label.textContent : '';
+      if (hint) line += ' ' + hint.textContent;
+      else {
+        const extra = field.textContent.replace(label ? label.textContent : '', '').trim();
+        if (extra) line += ' ' + extra;
+      }
+      lines.push(line);
+    });
+
+    navigator.clipboard.writeText(lines.join('\n')).then(() => {
+      const span = btn.querySelector('span');
+      btn.classList.add('copied');
+      span.textContent = 'Copied!';
+      setTimeout(() => {
+        btn.classList.remove('copied');
+        span.textContent = 'Copy';
+      }, 2000);
+    });
+  }
+
+  function toggleImportant(btn) {
+    btn.classList.toggle('open');
+    const content = btn.nextElementSibling;
+    content.classList.toggle('visible');
+  }
+
+  // Smooth scroll for nav links
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+</script>
+
+</body>
+</html>
