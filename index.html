@@ -256,6 +256,12 @@
       line-height: 1.5;
     }
 
+    .field-highlight {
+      background: #fff176;
+      padding: 1px 4px;
+      border-radius: 3px;
+    }
+
     @media (max-width: 600px) {
       header h1 { font-size: 22px; }
       .nav-links { flex-direction: column; }
@@ -284,6 +290,13 @@
     <div class="nav-links">
       <a href="#onboarding-service-provider">Onboarding Request (Service Provider)</a>
       <a href="#onboarding-employee">Onboarding Request (Employee)</a>
+    </div>
+  </div>
+  <div class="nav-row">
+    <h2>Compliance Templates</h2>
+    <div class="nav-links">
+      <a href="#worker-screen-support-worker">Worker Screen (Support Worker)</a>
+      <a href="#non-current-employee-credential-check">Non-Current Employee Credential Check</a>
     </div>
   </div>
 </div>
@@ -437,7 +450,7 @@
       <div class="field"><span class="field-label">Driving Required:</span> Y/N</div>
       <div class="field"><span class="field-label">Pay Rate:</span></div>
       <div class="field"><span class="field-label">Additional Comments:</span></div>
-      <div class="section-note">ASSIGN TO: HR Team</div>
+      <div class="section-note">ASSIGN TO: Compliance Team</div>
       <div class="important-section">
         <button class="important-toggle" onclick="toggleImportant(this)">
           <span class="chevron">&#9654;</span> Important (Please Read)
@@ -447,6 +460,73 @@
             <li>If onboarding for a specific client, enter the client name. If onboarding without a client, write "Area Hiring."</li>
             <li>List the proposed base rate only &mdash; the recruitment team will calculate all penalty rates (weekday PM &amp; Night, Saturday, Sunday, public holiday). If left blank, the recruitment team will liaise with the candidate directly.</li>
           </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. Worker Screen (Support Worker) -->
+  <div class="template-card" id="worker-screen-support-worker">
+    <div class="template-header">
+      <h3>Worker Screen (Support Worker)</h3>
+      <button class="copy-btn" onclick="copyTemplate(this)">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+        <span>Copy</span>
+      </button>
+    </div>
+    <div class="template-body" data-template>
+      <div class="field"><span class="field-label">Role Title:</span> Support Worker</div>
+      <div class="field"><span class="field-label">Definition (from Worker Screening Rules):</span> <span class="field-hint">A role for which the normal duties include the direct delivery of specified supports or services to a person with disability, involving more than incidental contact with persons with disability.</span></div>
+      <div class="field"><span class="field-label">Description of Role:</span> <span class="field-hint">Provides direct personal care, community access support, and daily living assistance to NDIS participants in their homes and community settings.</span></div>
+      <div class="field"><span class="field-label">Date Assessed as Risk-Assessed Role:</span> <span class="field-highlight">DD/MM/YYYY (Engagement date)</span></div>
+      <div class="field"><span class="field-label">Worker Screening ID:</span> <span class="field-highlight">XXXXX</span></div>
+      <div class="field"><span class="field-label">Screening Status:</span> Clearance</div>
+      <div class="field"><span class="field-label">Screening Expiry:</span> <span class="field-highlight">DD/MM/YYYY</span></div>
+      <div class="field"><span class="field-label">Clearance Notes:</span> <span class="field-hint">Eligible to work. No interim bar, suspension, or exclusion. No misconduct or allegations. Not working without clearance.</span></div>
+      <div class="field"><span class="field-label">Assessed By:</span> <span class="field-hint">Zhibai Wang, Worker Screening Officer</span></div>
+      <div class="section-note">ASSIGN TO: Compliance Team</div>
+      <div class="important-section">
+        <button class="important-toggle" onclick="toggleImportant(this)">
+          <span class="chevron">&#9654;</span> Important (Please Read)
+        </button>
+        <div class="important-content">
+          <p class="important-text">This template must be completed when onboarding any new NDIS workers.</p>
+          <p class="important-text">Go into the relevant worker profile and navigate to the <strong>Notes</strong> section.</p>
+          <p class="important-text">Click on <strong>New Note/Task</strong>.</p>
+          <p class="important-text">When the template appears:</p>
+          <ul>
+            <li>Select the Category: <strong>NDIS &mdash; Worker Screening</strong></li>
+            <li>In the <strong>Note</strong> section, copy the template and complete all highlighted sections</li>
+            <li>Under Assign to, select the <strong>Compliance team</strong></li>
+            <li>Set <strong>Note Date</strong> as the date you are completing the form</li>
+            <li>Tick <strong>&ldquo;Mark note as completed&rdquo;</strong></li>
+            <li>Click <strong>Save Note</strong> at the bottom</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. Non-Current Employee Credential Check -->
+  <div class="template-card" id="non-current-employee-credential-check">
+    <div class="template-header">
+      <h3>Non-Current Employee Credential Check</h3>
+      <button class="copy-btn" onclick="copyTemplate(this)">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+        <span>Copy</span>
+      </button>
+    </div>
+    <div class="template-body" data-template>
+      <div class="field"><span class="field-label">Region:</span> <span class="field-hint">Sydney/Melb/Newcastle</span></div>
+      <div class="field"><span class="field-label">Client Name:</span> <span class="field-hint">(which client will they be supporting)</span></div>
+      <div class="field"><span class="field-label">Candidate Name:</span></div>
+      <div class="section-note">ASSIGN TO: DOCTYPE</div>
+      <div class="important-section">
+        <button class="important-toggle" onclick="toggleImportant(this)">
+          <span class="chevron">&#9654;</span> Important (Please Read)
+        </button>
+        <div class="important-content">
+          <p class="important-text">Ensure to select note category: <strong>Credential Check (Compliance)</strong></p>
         </div>
       </div>
     </div>
