@@ -283,6 +283,8 @@
       <a href="#new-service-request">New Service Request</a>
       <a href="#cancellation">Cancellation</a>
       <a href="#service-reschedule">Service Reschedule</a>
+      <a href="#referral-cabcharge">Referral Request - Cabcharge</a>
+      <a href="#referral-meal-delivery">Referral Request - Meal Delivery</a>
     </div>
   </div>
   <div class="nav-row">
@@ -372,7 +374,49 @@
     </div>
   </div>
 
-  <!-- 4. Onboarding Request (Service Provider) -->
+  <!-- 4. Referral Request - Cabcharge -->
+  <div class="template-card" id="referral-cabcharge">
+    <div class="template-header">
+      <h3>Referral Request &mdash; Cabcharge</h3>
+      <button class="copy-btn" onclick="copyTemplate(this)">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+        <span>Copy</span>
+      </button>
+    </div>
+    <div class="template-body" data-template>
+      <div class="field"><span class="field-label">Cab charge:</span> <span class="field-hint">Card or Gift Card</span></div>
+      <div class="field"><span class="field-label">Trip limit amount:</span></div>
+      <div class="field"><span class="field-label">Monthly limit amount / gift card amount:</span></div>
+      <div class="field"><span class="field-label">Client aware of co-contribution:</span> Yes/No</div>
+      <div class="field"><span class="field-label">Client aware of charge structure:</span> Yes/No</div>
+      <div class="field"><span class="field-label">Contact person for client:</span></div>
+      <div class="section-note">ASSIGN TO: Compliance / Service Coordination Team</div>
+    </div>
+  </div>
+
+  <!-- 5. Referral Request - Meal Delivery -->
+  <div class="template-card" id="referral-meal-delivery">
+    <div class="template-header">
+      <h3>Referral Request &mdash; Meal Delivery</h3>
+      <button class="copy-btn" onclick="copyTemplate(this)">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+        <span>Copy</span>
+      </button>
+    </div>
+    <div class="template-body" data-template>
+      <div class="field"><span class="field-label">Company:</span></div>
+      <div class="field"><span class="field-label">Contact email/phone:</span></div>
+      <div class="field"><span class="field-label">Onboarded:</span> Yes/No</div>
+      <div class="field"><span class="field-label">Meal monthly limit amount:</span></div>
+      <div class="field"><span class="field-label">Client aware of co-contribution:</span> Yes/No</div>
+      <div class="field"><span class="field-label">Client aware of charge structure:</span> Yes/No</div>
+      <div class="field"><span class="field-label">Preferences (if known):</span></div>
+      <div class="field"><span class="field-label">Contact person for client:</span></div>
+      <div class="section-note">ASSIGN TO: Compliance / Service Coordination Team</div>
+    </div>
+  </div>
+
+  <!-- 6. Onboarding Request (Service Provider) -->
   <div class="template-card" id="onboarding-service-provider">
     <div class="template-header">
       <h3>Onboarding Request (Service Provider)</h3>
@@ -435,7 +479,7 @@
     </div>
   </div>
 
-  <!-- 5. Onboarding Request (Employee) -->
+  <!-- 7. Onboarding Request (Employee) -->
   <div class="template-card" id="onboarding-employee">
     <div class="template-header">
       <h3>Onboarding Request (Employee)</h3>
@@ -471,7 +515,7 @@
     </div>
   </div>
 
-  <!-- 6. Worker Screen (Support Worker) -->
+  <!-- 8. Worker Screen (Support Worker) -->
   <div class="template-card" id="worker-screen-support-worker">
     <div class="template-header">
       <h3>Worker Screen (Support Worker)</h3>
@@ -513,7 +557,7 @@
     </div>
   </div>
 
-  <!-- 7. Non-Current Workforce Credential Check -->
+  <!-- 9. Non-Current Workforce Credential Check -->
   <div class="template-card" id="non-current-employee-credential-check">
     <div class="template-header">
       <h3>Non-Current Workforce Credential Check</h3>
@@ -538,7 +582,7 @@
     </div>
   </div>
 
-  <!-- 8. Shift Cancellation -->
+  <!-- 10. Shift Cancellation -->
   <div class="template-card" id="shift-cancellation">
     <div class="template-header">
       <h3>Shift Cancellation</h3>
