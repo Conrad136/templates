@@ -287,6 +287,8 @@
       <a href="#referral-meal-delivery">Referral Request - Meal Delivery</a>
       <a href="#referral-window-gutter">Referral Request - Window/Gutter Cleaning</a>
       <a href="#referral-gardening">Referral Request - Gardening</a>
+      <a href="#services-on-hold">Client ALL SERVICES ON HOLD Request</a>
+      <a href="#services-reinstate">Client REINSTATE ALL SERVICES Request</a>
     </div>
   </div>
   <div class="nav-row">
@@ -461,7 +463,40 @@
     </div>
   </div>
 
-  <!-- 8. Onboarding Request (Service Provider) -->
+  <!-- 8. Client ALL SERVICES ON HOLD Request -->
+  <div class="template-card" id="services-on-hold">
+    <div class="template-header">
+      <h3>Client ALL SERVICES ON HOLD Request</h3>
+      <button class="copy-btn" onclick="copyTemplate(this)">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+        <span>Copy</span>
+      </button>
+    </div>
+    <div class="template-body" data-template>
+      <div class="field"><span class="field-label">Reason for on hold:</span></div>
+      <div class="field"><span class="field-label">Date Range or Until Further Notice:</span></div>
+      <div class="field"><span class="field-label">Other instructions:</span> <span class="field-hint">(i.e. leave gardening in place)</span></div>
+      <div class="section-note">ASSIGN TO: Compliance / Service Coordination Team</div>
+    </div>
+  </div>
+
+  <!-- 9. Client REINSTATE ALL SERVICES Request -->
+  <div class="template-card" id="services-reinstate">
+    <div class="template-header">
+      <h3>Client REINSTATE ALL SERVICES Request</h3>
+      <button class="copy-btn" onclick="copyTemplate(this)">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+        <span>Copy</span>
+      </button>
+    </div>
+    <div class="template-body" data-template>
+      <div class="field"><span class="field-label">Date the services need to be reinstated from:</span></div>
+      <div class="field"><span class="field-label">Other instructions:</span> <span class="field-hint">(i.e. change tasks for SW)</span></div>
+      <div class="section-note">ASSIGN TO: Compliance / Service Coordination Team</div>
+    </div>
+  </div>
+
+  <!-- 10. Onboarding Request (Service Provider) -->
   <div class="template-card" id="onboarding-service-provider">
     <div class="template-header">
       <h3>Onboarding Request (Service Provider)</h3>
@@ -524,7 +559,7 @@
     </div>
   </div>
 
-  <!-- 9. Onboarding Request (Employee) -->
+  <!-- 11. Onboarding Request (Employee) -->
   <div class="template-card" id="onboarding-employee">
     <div class="template-header">
       <h3>Onboarding Request (Employee)</h3>
@@ -560,7 +595,7 @@
     </div>
   </div>
 
-  <!-- 10. Worker Screen (Support Worker) -->
+  <!-- 12. Worker Screen (Support Worker) -->
   <div class="template-card" id="worker-screen-support-worker">
     <div class="template-header">
       <h3>Worker Screen (Support Worker)</h3>
@@ -602,7 +637,7 @@
     </div>
   </div>
 
-  <!-- 11. Non-Current Workforce Credential Check -->
+  <!-- 13. Non-Current Workforce Credential Check -->
   <div class="template-card" id="non-current-employee-credential-check">
     <div class="template-header">
       <h3>Non-Current Workforce Credential Check</h3>
@@ -627,7 +662,7 @@
     </div>
   </div>
 
-  <!-- 12. Shift Cancellation -->
+  <!-- 14. Shift Cancellation -->
   <div class="template-card" id="shift-cancellation">
     <div class="template-header">
       <h3>Shift Cancellation</h3>
