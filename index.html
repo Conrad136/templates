@@ -273,6 +273,69 @@
       margin-bottom: 0;
     }
 
+    .workflow-section {
+      margin-top: 10px;
+      border: 1px solid #cfe6d5;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .workflow-toggle {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+      padding: 10px 14px;
+      background: #eef7f1;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 700;
+      color: #1e7e34;
+      text-align: left;
+      transition: background 0.2s;
+    }
+
+    .workflow-toggle:hover {
+      background: #e0f0e6;
+    }
+
+    .workflow-toggle .chevron {
+      transition: transform 0.25s;
+      font-size: 12px;
+    }
+
+    .workflow-toggle.open .chevron {
+      transform: rotate(90deg);
+    }
+
+    .workflow-content {
+      display: none;
+      padding: 12px 14px 14px;
+      background: #f7fcf9;
+    }
+
+    .workflow-content.visible {
+      display: block;
+    }
+
+    .workflow-content ol {
+      margin: 0;
+      padding-left: 22px;
+      list-style: decimal;
+    }
+
+    .workflow-content ol > li {
+      font-size: 13px;
+      color: #333;
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+
+    .workflow-content ol > li:last-child {
+      margin-bottom: 0;
+    }
+
     .field-highlight {
       background: #fff176;
       padding: 1px 4px;
@@ -313,6 +376,7 @@
       <a href="#services-on-hold">Client ALL SERVICES ON HOLD Request</a>
       <a href="#services-reinstate">Client REINSTATE ALL SERVICES Request</a>
       <a href="#pricing-consent">Pricing Consent (Service Variation)</a>
+      <a href="#holistic-assessment">Holistic Assessment</a>
     </div>
   </div>
   <div class="nav-row">
@@ -327,6 +391,7 @@
     <div class="nav-links">
       <a href="#worker-screen-support-worker">Worker Screen (Support Worker)</a>
       <a href="#non-current-employee-credential-check">Non-Current Workforce Credential Check</a>
+      <a href="#holistic-assessment">Holistic Assessment</a>
     </div>
   </div>
   <div class="nav-row">
@@ -768,7 +833,49 @@
     </div>
   </div>
 
-  <!-- 16. Ordering Request -->
+  <!-- 16. Holistic Assessment -->
+  <div class="template-card" id="holistic-assessment">
+    <div class="template-header">
+      <h3>Holistic Assessment</h3>
+      <button class="copy-btn" onclick="copyTemplate(this)">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+        <span>Copy</span>
+      </button>
+    </div>
+    <div class="template-body" data-template>
+      <div class="field"><span class="field-label">CONSUMER NAME:</span></div>
+      <div class="field"><span class="field-label">BUDGET CHECKED:</span> <span class="field-hint">Yes / No</span></div>
+      <div class="field"><span class="field-label">CONSUMER RESPONSE:</span> <span class="field-hint">Accepted / Declined</span></div>
+      <div class="field"><span class="field-label">REASON IF DECLINED:</span></div>
+      <div class="section-note">ASSIGN TO: RN Team (if accepted) or Compliance Team (if declined)</div>
+      <div class="important-section">
+        <button class="important-toggle" onclick="toggleImportant(this)">
+          <span class="chevron">&#9654;</span> Important (Please Read)
+        </button>
+        <div class="important-content">
+          <ul>
+            <li>Select the category <strong>SAH 120 &ndash; Holistic Assessment Due</strong>.</li>
+            <li>Holistic assessments are due every <strong>6 months</strong>. The task is assigned to the Care Partner when due. Care Partners can also raise the first one themselves.</li>
+            <li>If the client declines and there are significant risks where not completing an assessment could cause issues, a <strong>Dignity of Risk</strong> form must be signed.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="workflow-section">
+        <button class="workflow-toggle" onclick="toggleImportant(this)">
+          <span class="chevron">&#9654;</span> Workflow (in order of events)
+        </button>
+        <div class="workflow-content">
+          <ol>
+            <li><strong>Care Partner:</strong> check in with the client, check the budget, and speak to the client to line up a holistic assessment as part of our routine review or initial onboarding. If the client declines, record the reason. Assign the task to the <strong>RN Team</strong> if accepted, or the <strong>Compliance Team</strong> if declined.</li>
+            <li><strong>RN Team:</strong> complete the assessment, record the date of assessment in the comments, and either update the existing files or upload new ones. If new files replace old ones, move the old files into the <strong>Archive</strong> subfolder within the same assessments folder, <strong>Tab 3 &ndash; Nursing</strong> (create one if it does not exist). Re-assign the task to the <strong>Compliance Team</strong>.</li>
+            <li><strong>Compliance Team:</strong> if the assessment was done, check the documentation is complete, files are updated or new files are in place with old files archived, and set the next due date <strong>6 months from the date of assessment</strong>. If the client declined, set the next due date <strong>6 months from the date the task was received</strong>. Close the task.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 17. Ordering Request -->
   <div class="template-card" id="ordering-request">
     <div class="template-header">
       <h3>Ordering Request</h3>
@@ -809,7 +916,7 @@
     </div>
   </div>
 
-  <!-- 17. Equipment Trial Request -->
+  <!-- 18. Equipment Trial Request -->
   <div class="template-card" id="equipment-trial">
     <div class="template-header">
       <h3>Equipment Trial Request</h3>
@@ -843,7 +950,7 @@
     </div>
   </div>
 
-  <!-- 18. Shift Cancellation -->
+  <!-- 19. Shift Cancellation -->
   <div class="template-card" id="shift-cancellation">
     <div class="template-header">
       <h3>Shift Cancellation</h3>
