@@ -278,6 +278,12 @@
 <!-- Navigation -->
 <div class="nav-container">
   <div class="nav-row">
+    <h2>General Templates</h2>
+    <div class="nav-links">
+      <a href="#complaint">Complaint</a>
+    </div>
+  </div>
+  <div class="nav-row">
     <h2>Care Partner Templates</h2>
     <div class="nav-links">
       <a href="#new-service-request">New Service Request</a>
@@ -316,7 +322,45 @@
 <!-- Templates -->
 <div class="templates-container">
 
-  <!-- 1. New Service Request -->
+  <!-- 1. Complaint -->
+  <div class="template-card" id="complaint">
+    <div class="template-header">
+      <h3>Complaint</h3>
+      <button class="copy-btn" onclick="copyTemplate(this)">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+        <span>Copy</span>
+      </button>
+    </div>
+    <div class="template-body" data-template>
+      <div class="field"><span class="field-label">DATE RECEIVED:</span></div>
+      <div class="field"><span class="field-label">RECEIVED HOW:</span> <span class="field-hint">Phone / Email / In person / Survey / Third party / Commission</span></div>
+      <div class="field"><span class="field-label">RAISED BY:</span> <span class="field-hint">Client / Family / Representative / Advocate / Staff / Anonymous (name and relationship)</span></div>
+      <div class="field"><span class="field-label">CLIENT AWARE AND AGREES TO COMPLAINT:</span> <span class="field-hint">Yes / No / N/A (client raised it) &mdash; If No, do not act on it without the client&rsquo;s agreement unless there is a safety or wellbeing concern. Record the decision in the trail.</span></div>
+      <div class="field"><span class="field-label">NATURE OF COMPLAINT:</span> <span class="field-hint">Missed or late service / Worker conduct / Quality of care / Communication / Rostering / Fees or budget / Privacy / Cultural safety or rights / Service provider / Other</span></div>
+      <div class="field"><span class="field-label">SUMMARY:</span> <span class="field-hint">(complainant&rsquo;s own words where possible, including who was involved)</span></div>
+      <div class="field"><span class="field-label">DESIRED OUTCOME:</span></div>
+      <div class="field"><span class="field-label">INCIDENT REPORT LODGED:</span> <span class="field-hint">Yes / No / Not required</span></div>
+      <div class="field"><span class="field-label">OPEN DISCLOSURE REQUIRED:</span> <span class="field-hint">Yes / No / To be assessed (if something went wrong in the client&rsquo;s care, we must tell them and their representative what happened, apologise, and explain what has been done to fix it)</span></div>
+      <div class="field"><span class="field-label">COMPLAINTS PROCESS EXPLAINED TO COMPLAINANT:</span> <span class="field-hint">Yes / No</span></div>
+      <div class="section-note">ASSIGN TO: Person handling the complaint</div>
+      <div class="important-section">
+        <button class="important-toggle" onclick="toggleImportant(this)">
+          <span class="chevron">&#9654;</span> Important (Please Read)
+        </button>
+        <div class="important-content">
+          <ul>
+            <li>Use for any dissatisfaction raised, whether or not the word &ldquo;complaint&rdquo; is used.</li>
+            <li>Select the category <strong>SAH 15 &ndash; Complaint</strong>.</li>
+            <li>Complaints should be acknowledged within <strong>2 days</strong> and closed off before <strong>28 days</strong>. Update the complainant at least every <strong>14 days</strong> if not resolved by 28 days.</li>
+            <li>If an incident is described, lodge the incident form as well and mark &ldquo;Yes&rdquo; above.</li>
+            <li>Close the complaint only once the client is satisfied with the outcome, or has been told the outcome and their options if they are not. Record this in the trail before marking complete.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. New Service Request -->
   <div class="template-card" id="new-service-request">
     <div class="template-header">
       <h3>New Service Request</h3>
@@ -341,7 +385,7 @@
     </div>
   </div>
 
-  <!-- 2. Cancellation -->
+  <!-- 3. Cancellation -->
   <div class="template-card" id="cancellation">
     <div class="template-header">
       <h3>Cancellation</h3>
@@ -358,7 +402,7 @@
     </div>
   </div>
 
-  <!-- 3. Service Reschedule -->
+  <!-- 4. Service Reschedule -->
   <div class="template-card" id="service-reschedule">
     <div class="template-header">
       <h3>Service Reschedule</h3>
@@ -379,7 +423,7 @@
     </div>
   </div>
 
-  <!-- 4. Referral Request - Cabcharge -->
+  <!-- 5. Referral Request - Cabcharge -->
   <div class="template-card" id="referral-cabcharge">
     <div class="template-header">
       <h3>Referral Request &mdash; Cabcharge</h3>
@@ -399,7 +443,7 @@
     </div>
   </div>
 
-  <!-- 5. Referral Request - Meal Delivery -->
+  <!-- 6. Referral Request - Meal Delivery -->
   <div class="template-card" id="referral-meal-delivery">
     <div class="template-header">
       <h3>Referral Request &mdash; Meal Delivery</h3>
@@ -421,7 +465,7 @@
     </div>
   </div>
 
-  <!-- 6. Referral Request - Window/Gutter Cleaning -->
+  <!-- 7. Referral Request - Window/Gutter Cleaning -->
   <div class="template-card" id="referral-window-gutter">
     <div class="template-header">
       <h3>Referral Request &mdash; Window/Gutter Cleaning</h3>
@@ -442,7 +486,7 @@
     </div>
   </div>
 
-  <!-- 7. Referral Request - Gardening -->
+  <!-- 8. Referral Request - Gardening -->
   <div class="template-card" id="referral-gardening">
     <div class="template-header">
       <h3>Referral Request &mdash; Gardening</h3>
@@ -464,7 +508,7 @@
     </div>
   </div>
 
-  <!-- 8. Client ALL SERVICES ON HOLD Request -->
+  <!-- 9. Client ALL SERVICES ON HOLD Request -->
   <div class="template-card" id="services-on-hold">
     <div class="template-header">
       <h3>Client ALL SERVICES ON HOLD Request</h3>
@@ -481,7 +525,7 @@
     </div>
   </div>
 
-  <!-- 9. Client REINSTATE ALL SERVICES Request -->
+  <!-- 10. Client REINSTATE ALL SERVICES Request -->
   <div class="template-card" id="services-reinstate">
     <div class="template-header">
       <h3>Client REINSTATE ALL SERVICES Request</h3>
@@ -497,7 +541,7 @@
     </div>
   </div>
 
-  <!-- 10. Onboarding Request (Service Provider) -->
+  <!-- 11. Onboarding Request (Service Provider) -->
   <div class="template-card" id="onboarding-service-provider">
     <div class="template-header">
       <h3>Onboarding Request (Service Provider)</h3>
@@ -560,7 +604,7 @@
     </div>
   </div>
 
-  <!-- 11. Onboarding Request (Employee) -->
+  <!-- 12. Onboarding Request (Employee) -->
   <div class="template-card" id="onboarding-employee">
     <div class="template-header">
       <h3>Onboarding Request (Employee)</h3>
@@ -596,7 +640,7 @@
     </div>
   </div>
 
-  <!-- 12. Worker Screen (Support Worker) -->
+  <!-- 13. Worker Screen (Support Worker) -->
   <div class="template-card" id="worker-screen-support-worker">
     <div class="template-header">
       <h3>Worker Screen (Support Worker)</h3>
@@ -638,7 +682,7 @@
     </div>
   </div>
 
-  <!-- 13. Non-Current Workforce Credential Check -->
+  <!-- 14. Non-Current Workforce Credential Check -->
   <div class="template-card" id="non-current-employee-credential-check">
     <div class="template-header">
       <h3>Non-Current Workforce Credential Check</h3>
@@ -663,7 +707,7 @@
     </div>
   </div>
 
-  <!-- 14. Shift Cancellation -->
+  <!-- 15. Shift Cancellation -->
   <div class="template-card" id="shift-cancellation">
     <div class="template-header">
       <h3>Shift Cancellation</h3>
