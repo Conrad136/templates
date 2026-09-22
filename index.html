@@ -256,6 +256,23 @@
       line-height: 1.5;
     }
 
+    .important-content ol {
+      margin: 8px 0 0;
+      padding-left: 22px;
+      list-style: decimal;
+    }
+
+    .important-content ol > li {
+      font-size: 13px;
+      color: #333;
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+
+    .important-content ol > li:last-child {
+      margin-bottom: 0;
+    }
+
     .field-highlight {
       background: #fff176;
       padding: 1px 4px;
@@ -316,6 +333,7 @@
     <h2>Ordering Templates</h2>
     <div class="nav-links">
       <a href="#ordering-request">Ordering Request</a>
+      <a href="#equipment-trial">Equipment Trial Request</a>
     </div>
   </div>
   <div class="nav-row">
@@ -791,7 +809,39 @@
     </div>
   </div>
 
-  <!-- 17. Shift Cancellation -->
+  <!-- 17. Equipment Trial Request -->
+  <div class="template-card" id="equipment-trial">
+    <div class="template-header">
+      <h3>Equipment Trial Request</h3>
+      <button class="copy-btn" onclick="copyTemplate(this)">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+        <span>Copy</span>
+      </button>
+    </div>
+    <div class="template-body" data-template>
+      <div class="field"><span class="field-label">ITEM(S):</span> <span class="field-hint">(one line per item: name, supplier link or website, quantity, supplier contact details if applicable)</span></div>
+      <div class="field"><span class="field-label">URGENT:</span> <span class="field-hint">Yes / No (if Yes, needed by when)</span></div>
+      <div class="section-note">ASSIGN TO: Ordering Team</div>
+      <div class="important-section">
+        <button class="important-toggle" onclick="toggleImportant(this)">
+          <span class="chevron">&#9654;</span> Important (Please Read)
+        </button>
+        <div class="important-content">
+          <ul>
+            <li>Select the category <strong>SAH 30 &ndash; Equipment Trial</strong>.</li>
+            <li>Workflow (in order of events):</li>
+          </ul>
+          <ol>
+            <li><strong>Ordering Team:</strong> once you receive the task, contact the supplier to obtain the purchase quote for the item, the trial fee (if applicable), and confirm whether the trial can be done at the client&rsquo;s home or only at the showroom. If showroom, write the address and ensure it is the closest to the client&rsquo;s house. Record all of this in the comments section of the task, attach the quote, and reassign the task back to the <strong>Care Partner</strong>.</li>
+            <li><strong>Care Partner:</strong> gain client consent for the trial, quoting our cost plus any additional charges from the supplier if any. <span class="field-highlight">Record the exact price, co-contribution and consent in the comments section of the task</span>, then assign the task to the <strong>Rostering Team</strong>.</li>
+            <li><strong>Rostering Team:</strong> contact the supplier to lock in the date and time and inform the client. Cap the trial at <strong>2 hours</strong> where possible. Add a roster note on the shift stating where the trial will take place (client&rsquo;s home or showroom, with address), and ensure the correct shift type for equipment trial is selected.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 18. Shift Cancellation -->
   <div class="template-card" id="shift-cancellation">
     <div class="template-header">
       <h3>Shift Cancellation</h3>
