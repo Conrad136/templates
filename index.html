@@ -379,15 +379,15 @@
 <!-- Navigation -->
 <div class="nav-container">
   <div class="nav-row">
-    <h2>Intake Templates</h2>
-    <div class="nav-links">
-      <a href="#intake-checklist">Intake Checklist (SAH)</a>
-    </div>
-  </div>
-  <div class="nav-row">
     <h2>General Templates</h2>
     <div class="nav-links">
       <a href="#complaint">Complaint</a>
+    </div>
+  </div>
+  <div class="nav-row">
+    <h2>Intake Templates</h2>
+    <div class="nav-links">
+      <a href="#intake-checklist">Intake Checklist (SAH)</a>
     </div>
   </div>
   <div class="nav-row">
@@ -447,45 +447,7 @@
 <!-- Templates -->
 <div class="templates-container">
 
-  <!-- 0. Intake Checklist (SAH) -->
-  <div class="template-card" id="intake-checklist">
-    <div class="template-header">
-      <h3>Intake Checklist (SAH)</h3>
-      <button class="copy-btn" onclick="copyTemplate(this)">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
-        <span>Copy</span>
-      </button>
-    </div>
-    <div class="template-body" data-template>
-      <div class="field"><span class="field-label">CLIENT NAME:</span></div>
-      <div class="field"><span class="field-label">CLASSIFICATION LEVEL CONFIRMED:</span> <span class="field-hint">Yes / No</span></div>
-      <div class="field"><span class="field-label">INTAKE DOCUMENTS COMPLETED (Care Plan, Service Agreement):</span> <span class="field-hint">Yes / No</span></div>
-      <div class="field"><span class="field-label">INTAKE ASSESSMENTS:</span></div>
-      <div class="field"><span class="field-label">BUDGET PLANNED TO CLASSIFICATION:</span> <span class="field-hint">Yes / No</span></div>
-      <div class="field"><span class="field-label">NURSING ASSESSMENT BOOKED:</span> <span class="field-hint">Yes / No (reason if No)</span></div>
-      <div class="field"><span class="field-label">CLINICAL REFERRALS ORGANISED:</span> <span class="field-hint">Yes / N/A</span></div>
-      <div class="field"><span class="field-label">TASK RAISED TO SERVICE COORDINATION (non-clinical referrals):</span> <span class="field-hint">Yes / N/A</span></div>
-      <div class="field"><span class="field-label">TASK RAISED TO ROSTERING (internal services):</span> <span class="field-hint">Yes / N/A</span></div>
-      <div class="field"><span class="field-label">ADMIN TEAM NOTIFIED TO ADMIT CLIENT ON PRODA:</span> <span class="field-hint">Yes / No</span></div>
-      <div class="field"><span class="field-label">HANDOVER TO CARE PARTNER (if not you):</span></div>
-      <div class="field"><span class="field-label">FOLLOW-UP ITEMS FOR CARE PARTNER (if not you):</span></div>
-      <div class="section-note">ASSIGN TO: Ongoing Care Partner</div>
-      <div class="important-section">
-        <button class="important-toggle" onclick="toggleImportant(this)">
-          <span class="chevron">&#9654;</span> Important (Please Read)
-        </button>
-        <div class="important-content">
-          <ul>
-            <li>Select the category <strong>SAH 240 &ndash; Client Onboarding</strong>.</li>
-            <li>Confirm the classification level before planning the budget, e.g. SAH Classification, MSO, AT-HM, RCP, EOL.</li>
-            <li><strong>Clinical referrals</strong> are organised by the Care Partner. <strong>Non-clinical referrals</strong> go to Service Coordination by task. <strong>Internal services</strong> go to Rostering by task.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 1. Complaint -->
+  <!-- 0. Complaint -->
   <div class="template-card" id="complaint">
     <div class="template-header">
       <h3>Complaint</h3>
@@ -517,6 +479,48 @@
             <li>Complaints should be acknowledged within <strong>2 days</strong> and closed off before <strong>28 days</strong>. Update the complainant at least every <strong>14 days</strong> if not resolved by 28 days.</li>
             <li>If an incident is described, lodge the incident form as well and mark &ldquo;Yes&rdquo; above.</li>
             <li>Close the complaint only once the client is satisfied with the outcome, or has been told the outcome and their options if they are not. Record this in the trail before marking complete.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1. Intake Checklist (SAH) -->
+  <div class="template-card" id="intake-checklist">
+    <div class="template-header">
+      <h3>Intake Checklist (SAH)</h3>
+      <button class="copy-btn" onclick="copyTemplate(this)">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+        <span>Copy</span>
+      </button>
+    </div>
+    <div class="template-body" data-template>
+      <div class="field"><span class="field-label">CLIENT NAME:</span></div>
+      <div class="field"><span class="field-label">CLASSIFICATION LEVEL CONFIRMED:</span> <span class="field-hint">Yes / No</span></div>
+      <div class="field"><span class="field-label">INTAKE DOCUMENTS COMPLETED (Care Plan, Service Agreement):</span> <span class="field-hint">Yes / No</span></div>
+      <div class="field"><span class="field-label">INTAKE ASSESSMENTS:</span></div>
+      <div class="field"><span class="field-label">BUDGET PLANNED TO CLASSIFICATION:</span> <span class="field-hint">Yes / No</span></div>
+      <div class="field"><span class="field-label">NURSING ASSESSMENT BOOKED:</span> <span class="field-hint">Yes / No (reason if No)</span></div>
+      <div class="field"><span class="field-label">CLINICAL REFERRALS ORGANISED:</span> <span class="field-hint">Yes / N/A</span></div>
+      <div class="field"><span class="field-label">TASK RAISED TO SERVICE COORDINATION/COMPLIANCE (non-clinical referrals):</span> <span class="field-hint">Yes / N/A</span></div>
+      <div class="field"><span class="field-label">TASK RAISED TO ROSTERING (internal services):</span> <span class="field-hint">Yes / N/A</span></div>
+      <div class="field"><span class="field-label">ADMIN TEAM NOTIFIED TO ADMIT CLIENT ON PRODA:</span> <span class="field-hint">Yes / No</span></div>
+      <div class="field"><span class="field-label">HANDOVER AND FOLLOW-UP ITEMS TO CARE PARTNER (if not you):</span> <span class="field-hint">Yes / Not applicable</span></div>
+      <div class="section-note">ASSIGN TO: Compliance / Service Coordination Team</div>
+      <div class="important-section">
+        <button class="important-toggle" onclick="toggleImportant(this)">
+          <span class="chevron">&#9654;</span> Important (Please Read)
+        </button>
+        <div class="important-content">
+          <ul>
+            <li>Select the category <strong>SAH 240 &ndash; Client Onboarding</strong>.</li>
+            <li>Confirm the classification level before planning the budget, e.g. SAH Classification, MSO, AT-HM, RCP, EOL.</li>
+            <li><strong>Clinical referrals</strong> are organised by the Care Partner. <strong>Non-clinical referrals</strong> go to Service Coordination/Compliance by task. <strong>Internal services</strong> go to Rostering by task.</li>
+          </ul>
+          <h4 class="important-subheading">Record Keeping</h4>
+          <ul>
+            <li>Once all intake documents are completed, email them to <strong>Compliance / Service Coordination</strong>.</li>
+            <li>Compliance / Service Coordination will complete the rest of the intake, including uploading files to <strong>OneDrive</strong> and completing the client profile on <strong>Visual Care</strong>.</li>
           </ul>
         </div>
       </div>
