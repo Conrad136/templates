@@ -78,6 +78,23 @@
       transform: translateY(-1px);
     }
 
+    .nav-subgroup {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #8a93a5;
+      margin: 14px 0 8px;
+      padding-top: 12px;
+      border-top: 1px solid #ebedf2;
+    }
+
+    .nav-subgroup:first-child {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+
     .templates-container {
       max-width: 900px;
       margin: 32px auto 60px;
@@ -365,19 +382,25 @@
   </div>
   <div class="nav-row">
     <h2>Care Partner Templates</h2>
+    <div class="nav-subgroup">Service Changes</div>
     <div class="nav-links">
       <a href="#new-service-request">New Service Request</a>
       <a href="#cancellation">Cancellation</a>
       <a href="#service-reschedule">Service Reschedule</a>
+      <a href="#services-on-hold">Client ALL SERVICES ON HOLD Request</a>
+      <a href="#services-reinstate">Client REINSTATE ALL SERVICES Request</a>
+    </div>
+    <div class="nav-subgroup">Referrals</div>
+    <div class="nav-links">
       <a href="#referral-cabcharge">Referral Request - Cabcharge</a>
       <a href="#referral-meal-delivery">Referral Request - Meal Delivery</a>
       <a href="#referral-window-gutter">Referral Request - Window/Gutter Cleaning</a>
       <a href="#referral-gardening">Referral Request - Gardening</a>
-      <a href="#services-on-hold">Client ALL SERVICES ON HOLD Request</a>
-      <a href="#services-reinstate">Client REINSTATE ALL SERVICES Request</a>
+    </div>
+    <div class="nav-subgroup">Reviews &amp; Consent</div>
+    <div class="nav-links">
       <a href="#pricing-consent">Pricing Consent (Service Variation)</a>
       <a href="#holistic-assessment">Holistic Assessment Due</a>
-      <a href="#care-plan-due">Care Plan Due</a>
     </div>
   </div>
   <div class="nav-row">
