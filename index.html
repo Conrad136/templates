@@ -399,6 +399,7 @@
       <a href="#service-reschedule">Service Reschedule</a>
       <a href="#services-on-hold">Client ALL SERVICES ON HOLD Request</a>
       <a href="#services-reinstate">Client REINSTATE ALL SERVICES Request</a>
+      <a href="#client-exit">Client Exit (SAH)</a>
     </div>
     <div class="nav-subgroup">Referrals</div>
     <div class="nav-links">
@@ -707,6 +708,36 @@
       <div class="field"><span class="field-label">Rostering Team notified:</span> <span class="field-hint">Yes / Not applicable</span></div>
       <div class="field"><span class="field-label">Other instructions:</span> <span class="field-hint">(i.e. change tasks for SW)</span></div>
       <div class="section-note">ASSIGN TO: Compliance / Service Coordination Team</div>
+    </div>
+  </div>
+
+  <!-- 10a. Client Exit (SAH) -->
+  <div class="template-card" id="client-exit">
+    <div class="template-header">
+      <h3>Client Exit (SAH)</h3>
+      <button class="copy-btn" onclick="copyTemplate(this)">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+        <span>Copy</span>
+      </button>
+    </div>
+    <div class="template-body" data-template>
+      <div class="field"><span class="field-label">CLIENT NAME:</span></div>
+      <div class="field"><span class="field-label">REASON FOR SERVICE END:</span> <span class="field-hint">Deceased / Transferred to another provider / Entered residential care / Client choice / Other</span></div>
+      <div class="field"><span class="field-label">SERVICE END DATE:</span></div>
+      <div class="field"><span class="field-label">IF TRANSFERRING TO ANOTHER PROVIDER:</span> <span class="field-hint">(what occurred, and what steps have been taken to retain the client)</span></div>
+      <div class="section-note">ASSIGN TO: Operations Manager</div>
+      <div class="important-section">
+        <button class="important-toggle" onclick="toggleImportant(this)">
+          <span class="chevron">&#9654;</span> Important (Please Read)
+        </button>
+        <div class="important-content">
+          <ul>
+            <li>Select the category <strong>SAH 60 &ndash; Discharge/Deceased</strong>.</li>
+            <li><span class="field-highlight">Raise this task as soon as you become aware the client is exiting.</span></li>
+            <li>The <strong>Operations Manager</strong> will re-assign to <strong>Service Coordination</strong> to take further actions.</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 
