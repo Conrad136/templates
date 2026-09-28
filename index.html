@@ -1121,12 +1121,24 @@
       <div class="field"><span class="field-label">Reason:</span></div>
       <div class="field"><span class="field-label">Reschedule:</span> Y/N</div>
       <div class="field"><span class="field-label">No Reschedule Reason:</span></div>
-      <div class="field"><span class="field-label">LCA:</span> Y/N</div>
+      <div class="field"><span class="field-label">Late Cancel Charge:</span> Y/N</div>
       <div class="field"><span class="field-label">Charge Client Justification:</span></div>
       <div class="field"><span class="field-label">Pay Worker Justification:</span></div>
       <div class="field"><span class="field-label">Notified by:</span> <span class="field-hint">CM/Client/Family</span></div>
       <div class="field"><span class="field-label">Notified how:</span> <span class="field-hint">Call/SMS/Email</span></div>
       <div class="section-note">ASSIGN TO: N/A</div>
+      <div class="important-section">
+        <button class="important-toggle" onclick="toggleImportant(this)">
+          <span class="chevron">&#9654;</span> Important (Please Read)
+        </button>
+        <div class="important-content">
+          <ul>
+            <li>If we are charging the client when a &lsquo;leave&rsquo; is applied to a shift, the system only allows us to set the cancellation charge percentage. This can only be set as <strong>0 or 1</strong>. We do not use partial cancellation charges (e.g. 80% as 0.8).</li>
+            <li>There is currently no option to adjust the number of chargeable hours within the system for shifts marked with &lsquo;leave&rsquo;. For example, if a 4-hour shift is considered a late cancellation and the client is being charged, the system will automatically apply the charge for the <strong>full 4 hours</strong>.</li>
+            <li>If we need to charge a different number of hours (e.g. charge 2 hours instead of 4 hours), you <strong>MUST</strong> leave a note in the <strong>&ldquo;Office Note&rdquo;</strong> column in the VC Timesheet tab for that specific shift. Accounts will then review and manually update the charge accordingly.</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 
