@@ -357,6 +357,38 @@
       margin-bottom: 0;
     }
 
+    .workflow-subheading {
+      font-size: 13px;
+      font-weight: 700;
+      color: #1e7e34;
+      margin: 14px 0 6px;
+    }
+
+    .workflow-text {
+      font-size: 13px;
+      color: #333;
+      margin-bottom: 6px;
+      line-height: 1.5;
+    }
+
+    .workflow-content ul {
+      margin: 0;
+      padding-left: 20px;
+      list-style: disc;
+    }
+
+    .workflow-content ul li {
+      font-size: 13px;
+      color: #333;
+      margin-bottom: 6px;
+      line-height: 1.5;
+    }
+
+    .workflow-content li > ul {
+      margin-top: 6px;
+      list-style: circle;
+    }
+
     .field-highlight {
       background: #fff176;
       padding: 1px 4px;
@@ -382,6 +414,12 @@
     <h2>General Templates</h2>
     <div class="nav-links">
       <a href="#complaint">Complaint</a>
+    </div>
+  </div>
+  <div class="nav-row">
+    <h2>Recruitment Templates</h2>
+    <div class="nav-links">
+      <a href="#recruitment-request">Recruitment Request</a>
     </div>
   </div>
   <div class="nav-row">
@@ -480,6 +518,69 @@
             <li>Complaints should be acknowledged within <strong>2 days</strong> and closed off before <strong>28 days</strong>. Update the complainant at least every <strong>14 days</strong> if not resolved by 28 days.</li>
             <li>If an incident is described, lodge the incident form as well and mark &ldquo;Yes&rdquo; above.</li>
             <li>Close the complaint only once the client is satisfied with the outcome, or has been told the outcome and their options if they are not. Record this in the trail before marking complete.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 0b. Recruitment Request -->
+  <div class="template-card" id="recruitment-request">
+    <div class="template-header">
+      <h3>Recruitment Request</h3>
+      <button class="copy-btn" onclick="copyTemplate(this)">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+        <span>Copy</span>
+      </button>
+    </div>
+    <div class="template-body" data-template>
+      <div class="field"><span class="field-label">REQUEST TYPE:</span> <span class="field-hint">Employee / Service Provider</span></div>
+      <div class="field"><span class="field-label">SERVICE / ROLE:</span> <span class="field-hint">(e.g. support work, nursing, cleaning, gardening)</span></div>
+      <div class="field"><span class="field-label">QUOTE REQUIRED:</span> <span class="field-hint">Yes / No</span></div>
+      <div class="field"><span class="field-label">DUTIES / SCOPE OF WORK:</span></div>
+      <div class="field"><span class="field-label">SERVICE DAYS:</span></div>
+      <div class="field"><span class="field-label">SERVICE TIMES:</span> <span class="field-hint">(as applicable, start and finish)</span></div>
+      <div class="field"><span class="field-label">FREQUENCY:</span> <span class="field-hint">Weekly / Fortnightly / Monthly / Once off</span></div>
+      <div class="field"><span class="field-label">START DATE:</span> <span class="field-hint">(as applicable)</span></div>
+      <div class="field"><span class="field-label">URGENT:</span> <span class="field-hint">Yes / No</span></div>
+      <div class="field"><span class="field-label">DRIVING REQUIRED:</span> <span class="field-hint">Yes / No (licence, own car, transporting client)</span></div>
+      <div class="field"><span class="field-label">CLIENT PREFERENCES:</span> <span class="field-hint">(gender, language, cultural)</span></div>
+      <div class="field"><span class="field-label">CANDIDATE MUST HAVE:</span> <span class="field-hint">(as applicable, e.g. speaks Greek, Cert III, manual handling experience, own gardening equipment)</span></div>
+      <div class="field"><span class="field-label">CANDIDATE NEEDS TO KNOW:</span> <span class="field-hint">(as applicable, e.g. dog on site, client smokes, hoist transfers, verbal aggression)</span></div>
+      <div class="section-note">ASSIGN TO: HR Team</div>
+      <div class="workflow-section">
+        <button class="workflow-toggle" onclick="toggleImportant(this)">
+          <span class="chevron">&#9654;</span> Workflow (Recruitment Team Only)
+        </button>
+        <div class="workflow-content">
+          <p class="workflow-text"><span class="field-highlight">This workflow is for the Recruitment Team once they receive this task.</span></p>
+
+          <h4 class="workflow-subheading">Quote required</h4>
+          <ul>
+            <li>Get the quote and provide it to the <strong>Service Coordination Team</strong>.</li>
+            <li>Service Coordination will update you if the provider is to be onboarded.</li>
+          </ul>
+
+          <h4 class="workflow-subheading">Employees</h4>
+          <ul>
+            <li>Onboard if the pay is within the negotiation levels on the <strong>pay matrix</strong>.</li>
+            <li>If the candidate asks for more, escalate to <strong>Conrad</strong>.</li>
+          </ul>
+
+          <h4 class="workflow-subheading">Service providers</h4>
+          <ul>
+            <li>Onboard if the rate is no more than <strong>80%</strong> of our standard rates (home care price list for SAH, NDIS pricing guide for NDIS).</li>
+            <li>If the rate is above 80%, get approval from <strong>Maria</strong> (SAH) or <strong>Harry</strong> (NDIS) before onboarding.</li>
+          </ul>
+
+          <h4 class="workflow-subheading">Once onboarded</h4>
+          <ul>
+            <li>Reassign the task to the <strong>Service Coordination Team</strong> with a comment that includes:
+              <ul>
+                <li>the name of the employee or service provider</li>
+                <li>the rate</li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
