@@ -788,14 +788,106 @@
       </button>
     </div>
     <div class="template-body" data-template>
-      <div class="field"><span class="field-label">Window / Gutters / Both:</span></div>
-      <div class="field"><span class="field-label">Service or Quotation required:</span></div>
-      <div class="field"><span class="field-label">Client aware of co-contribution:</span> Yes/No</div>
-      <div class="field"><span class="field-label">Client aware of charge structure:</span> Yes/No</div>
-      <div class="field"><span class="field-label">Pricing consideration notes:</span></div>
-      <div class="field"><span class="field-label">Client preferences:</span></div>
-      <div class="field"><span class="field-label">Contact person for client:</span></div>
+      <div class="field"><span class="field-label">WINDOW / GUTTERS / BOTH:</span></div>
+      <div class="field"><span class="field-label">QUOTE REQUIRED:</span> <span class="field-hint">Yes / No (Yes = get a quote for the client to approve before booking. No = book the service straight away.)</span></div>
+      <div class="field"><span class="field-label">CLIENT&rsquo;S PREFERRED PROVIDER:</span> <span class="field-hint">(only if the client has their own provider or wants a specific one. Include name and contact details)</span></div>
+      <div class="field"><span class="field-label">FREQUENCY:</span> <span class="field-hint">Once off / Ongoing (how often)</span></div>
+      <div class="field"><span class="field-label">PREFERRED DAYS / TIMES:</span> <span class="field-hint">(as applicable)</span></div>
+      <div class="field"><span class="field-label">START DATE:</span> <span class="field-hint">(as applicable)</span></div>
+      <div class="field"><span class="field-label">BUDGET CHECKED:</span> <span class="field-hint">Yes / No</span></div>
+      <div class="field"><span class="field-label">CLIENT PREFERENCES:</span></div>
+      <div class="field"><span class="field-label">PROVIDER NEEDS TO KNOW:</span> <span class="field-hint">(as applicable, e.g. two-storey home, roof access, dog on site, locked side gate)</span></div>
+      <div class="field"><span class="field-label">CLIENT AWARE OF CO-CONTRIBUTION:</span> <span class="field-hint">Yes / No</span></div>
+      <div class="field"><span class="field-label">CLIENT AWARE OF CHARGE STRUCTURE:</span> <span class="field-hint">Yes / No</span></div>
+      <div class="field"><span class="field-label">CONTACT PERSON FOR CLIENT:</span></div>
       <div class="section-note">ASSIGN TO: Compliance / Service Coordination Team</div>
+      <div class="important-section">
+        <button class="important-toggle" onclick="toggleImportant(this)">
+          <span class="chevron">&#9654;</span> Important (Please Read)
+        </button>
+        <div class="important-content">
+          <ul>
+            <li>Select the category <strong>SAH 30 &ndash; Referral Request</strong>.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="workflow-section">
+        <button class="workflow-toggle" onclick="toggleImportant(this)">
+          <span class="chevron">&#9654;</span> Workflow (in order of events)
+        </button>
+        <div class="workflow-content">
+          <ol>
+            <li><strong>Care Partner</strong>
+              <ul>
+                <li>Complete the template and assign to the <strong>Compliance / Service Coordination Team</strong>.</li>
+              </ul>
+            </li>
+            <li><strong>Compliance / Service Coordination Team</strong>: find the provider
+              <ul>
+                <li><strong>Care Partner named a provider:</strong>
+                  <ul>
+                    <li><strong>Already onboarded:</strong> go to step 3 if a quote is required, otherwise step 4.</li>
+                    <li><strong>Not onboarded:</strong> raise an <strong>Onboarding Request (Service Provider)</strong> to the <strong>HR Team</strong>. If a quote is required, get the quote first and only onboard once the client agrees.</li>
+                  </ul>
+                </li>
+                <li><strong>No provider named:</strong>
+                  <ul>
+                    <li><strong>Melbourne:</strong> use Cam&rsquo;s Window Cleaning (in VC as Cameron Macsween Jock Cam Pty Ltd).</li>
+                    <li><strong>Sydney:</strong> search VC under workers for cleaners or home maintenance suppliers in the client&rsquo;s area. Recommended: Radim Brokes Neighbours Cleaning (Sydney East).</li>
+                    <li>If you find one, go to step 3 if a quote is required, otherwise step 4.</li>
+                    <li><strong>None found:</strong> raise a <strong>Recruitment Request (Service Provider)</strong> to the <strong>HR Team</strong>.
+                      <ul>
+                        <li><strong>Quote required:</strong> mark QUOTE REQUIRED: Yes. Recruitment will send you the quote without onboarding. Go to step 3.</li>
+                        <li><strong>No quote required:</strong> mark QUOTE REQUIRED: No. Recruitment will onboard and send you the name and rate. Go to step 4.</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><strong>Compliance / Service Coordination Team</strong>: quote (if required)
+              <ul>
+                <li>If you don&rsquo;t have the quote yet (onboarded or named provider), request it from the provider.</li>
+                <li>Provide the quote to the <strong>Care Partner</strong> by reassigning this task.</li>
+                <li>The Care Partner confirms the price with the client and reassigns the task back to you. Read the comments carefully.</li>
+                <li>If the client agrees and the provider isn&rsquo;t onboarded yet:
+                  <ul>
+                    <li><strong>Sourced by Recruitment:</strong> let the <strong>Recruitment Team</strong> know to go ahead with onboarding.</li>
+                    <li><strong>Named by the Care Partner:</strong> raise an <strong>Onboarding Request (Service Provider)</strong> to the <strong>HR Team</strong>.</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><strong>Compliance / Service Coordination Team</strong>: set up the service (once the provider is onboarded)
+              <ul>
+                <li>Arrange the service with the provider. Be very specific about what is being requested and the hours allocated.</li>
+                <li>Tell the provider:
+                  <ul>
+                    <li>any variation to the work must be communicated <strong>in writing before</strong> the service; otherwise invoices may be rejected</li>
+                    <li>invoices must be sent to <a href="mailto:invoices@essecare.com.au">invoices@essecare.com.au</a> or <a href="mailto:invoices@enableu.com.au">invoices@enableu.com.au</a></li>
+                  </ul>
+                </li>
+                <li>Add the pricing and any other service information to the provider&rsquo;s VC profile for future use.</li>
+                <li>Contact the client to confirm the service is arranged, including when it is and who the provider is.</li>
+                <li>Advise the client to contact their Care Partner if they have any questions or issues.</li>
+                <li>Edit the task:
+                  <ul>
+                    <li><strong>Action:</strong> Service booked, with pricing (e.g. 2 hrs @ $150/hr for window and gutter cleaning). Service booked for (date and time) with (provider).</li>
+                    <li><strong>Outcome:</strong> Spoke to (client name) to notify the service has been booked for (date and time) with (provider). Care Partner, please update the budget tool.</li>
+                  </ul>
+                </li>
+                <li>Reassign the task to the <strong>Care Partner</strong>.</li>
+              </ul>
+            </li>
+            <li><strong>Care Partner</strong>
+              <ul>
+                <li><span class="field-highlight">Add the provider and rate (and frequency, if ongoing) to the client&rsquo;s budgeting tool.</span></li>
+                <li>Mark the task complete.</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </div>
     </div>
   </div>
 
