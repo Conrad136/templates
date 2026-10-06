@@ -389,6 +389,11 @@
       list-style: circle;
     }
 
+    .workflow-content ol > li > ul {
+      margin-top: 6px;
+      list-style: disc;
+    }
+
     .field-highlight {
       background: #fff176;
       padding: 1px 4px;
@@ -639,13 +644,59 @@
       </button>
     </div>
     <div class="template-body" data-template>
-      <div class="field"><span class="field-label">Cab charge:</span> <span class="field-hint">Card or Gift Card</span></div>
-      <div class="field"><span class="field-label">Trip limit amount:</span></div>
-      <div class="field"><span class="field-label">Monthly limit amount / gift card amount:</span></div>
-      <div class="field"><span class="field-label">Client aware of co-contribution:</span> Yes/No</div>
-      <div class="field"><span class="field-label">Client aware of charge structure:</span> Yes/No</div>
-      <div class="field"><span class="field-label">Contact person for client:</span></div>
+      <div class="field"><span class="field-label">TYPE:</span> <span class="field-hint">Card / Gift card</span></div>
+      <div class="field"><span class="field-label">TRIP LIMIT (card only):</span> <span class="field-hint">$</span></div>
+      <div class="field"><span class="field-label">MONTHLY LIMIT (card) or GIFT CARD AMOUNT:</span> <span class="field-hint">$</span></div>
+      <div class="field"><span class="field-label">DELIVERY ADDRESS:</span> <span class="field-hint">(only if not the client&rsquo;s home address)</span></div>
+      <div class="field"><span class="field-label">BUDGET CHECKED:</span> <span class="field-hint">Yes / No</span></div>
+      <div class="field"><span class="field-label">CLIENT AWARE OF CO-CONTRIBUTION:</span> <span class="field-hint">Yes / No</span></div>
+      <div class="field"><span class="field-label">CLIENT AWARE OF CHARGE STRUCTURE:</span> <span class="field-hint">Yes / No</span></div>
+      <div class="field"><span class="field-label">CONTACT PERSON FOR CLIENT:</span></div>
       <div class="section-note">ASSIGN TO: Compliance / Service Coordination Team</div>
+      <div class="important-section">
+        <button class="important-toggle" onclick="toggleImportant(this)">
+          <span class="chevron">&#9654;</span> Important (Please Read)
+        </button>
+        <div class="important-content">
+          <ul>
+            <li>Select the category <strong>SAH 30 &ndash; Referral Request</strong>.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="workflow-section">
+        <button class="workflow-toggle" onclick="toggleImportant(this)">
+          <span class="chevron">&#9654;</span> Workflow (in order of events)
+        </button>
+        <div class="workflow-content">
+          <ol>
+            <li><strong>Care Partner</strong>
+              <ul>
+                <li>Complete the template and assign to the <strong>Service Coordination Team</strong>.</li>
+              </ul>
+            </li>
+            <li><strong>Service Coordination Team</strong>
+              <ul>
+                <li>Order the card or gift card on the <strong>Cabcharge website</strong>, as per the request.</li>
+                <li>Contact the client to confirm the card has been ordered.</li>
+                <li>Advise the client to contact their Care Partner if they have any questions or issues.</li>
+                <li>Edit the task:
+                  <ul>
+                    <li><strong>Action:</strong> Card ordered.</li>
+                    <li><strong>Outcome:</strong> Spoke to (client name) to notify the card has been ordered and will be delivered (provide ETA).</li>
+                  </ul>
+                </li>
+                <li>Reassign the task to the <strong>Care Partner</strong>.</li>
+              </ul>
+            </li>
+            <li><strong>Care Partner</strong>
+              <ul>
+                <li><span class="field-highlight">Add Cabcharge and the limit to the client&rsquo;s budgeting tool.</span></li>
+                <li>Mark the task complete.</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -659,15 +710,71 @@
       </button>
     </div>
     <div class="template-body" data-template>
-      <div class="field"><span class="field-label">Company:</span></div>
-      <div class="field"><span class="field-label">Contact email/phone:</span></div>
-      <div class="field"><span class="field-label">Onboarded:</span> Yes/No</div>
-      <div class="field"><span class="field-label">Meal monthly limit amount:</span></div>
-      <div class="field"><span class="field-label">Client aware of co-contribution:</span> Yes/No</div>
-      <div class="field"><span class="field-label">Client aware of charge structure:</span> Yes/No</div>
-      <div class="field"><span class="field-label">Preferences (if known):</span></div>
-      <div class="field"><span class="field-label">Contact person for client:</span></div>
+      <div class="field"><span class="field-label">COMPANY:</span></div>
+      <div class="field"><span class="field-label">CONTACT EMAIL / PHONE:</span></div>
+      <div class="field"><span class="field-label">ONBOARDED:</span> <span class="field-hint">Yes / No</span></div>
+      <div class="field"><span class="field-label">MEAL MONTHLY LIMIT:</span> <span class="field-hint">$</span></div>
+      <div class="field"><span class="field-label">DELIVERY ADDRESS:</span> <span class="field-hint">(only if not the client&rsquo;s home address)</span></div>
+      <div class="field"><span class="field-label">BUDGET CHECKED:</span> <span class="field-hint">Yes / No</span></div>
+      <div class="field"><span class="field-label">CLIENT AWARE OF CO-CONTRIBUTION:</span> <span class="field-hint">Yes / No</span></div>
+      <div class="field"><span class="field-label">CLIENT AWARE OF CHARGE STRUCTURE:</span> <span class="field-hint">Yes / No</span></div>
+      <div class="field"><span class="field-label">PREFERENCES:</span> <span class="field-hint">(if known)</span></div>
+      <div class="field"><span class="field-label">CONTACT PERSON FOR CLIENT:</span></div>
       <div class="section-note">ASSIGN TO: Compliance / Service Coordination Team</div>
+      <div class="important-section">
+        <button class="important-toggle" onclick="toggleImportant(this)">
+          <span class="chevron">&#9654;</span> Important (Please Read)
+        </button>
+        <div class="important-content">
+          <ul>
+            <li>Select the category <strong>SAH 30 &ndash; Referral Request</strong>.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="workflow-section">
+        <button class="workflow-toggle" onclick="toggleImportant(this)">
+          <span class="chevron">&#9654;</span> Workflow (in order of events)
+        </button>
+        <div class="workflow-content">
+          <ol>
+            <li><strong>Care Partner</strong>
+              <ul>
+                <li>Complete the template and assign to the <strong>Compliance / Service Coordination Team</strong>.</li>
+              </ul>
+            </li>
+            <li><strong>Compliance / Service Coordination Team</strong>
+              <ul>
+                <li>If the supplier is not onboarded: raise an <strong>Onboarding Request (Service Provider)</strong> task and assign it to the <strong>HR Team</strong>. Continue with the steps below only once the supplier is onboarded.</li>
+                <li>View the supplier&rsquo;s VC profile and email them to set up the client&rsquo;s account. Ask if they have a referral form. Either complete the form or email the client&rsquo;s details:
+                  <ul>
+                    <li>name</li>
+                    <li>delivery address</li>
+                    <li>contact phone number</li>
+                    <li>Esse Care or EnableU nominated as payee</li>
+                  </ul>
+                </li>
+                <li>Tell the supplier that invoices must be sent to <a href="mailto:invoices@essecare.com.au">invoices@essecare.com.au</a> or <a href="mailto:invoices@enableu.com.au">invoices@enableu.com.au</a>.</li>
+                <li>Ask the supplier for a brochure or price list to send to the client.</li>
+                <li>Once the supplier confirms the account is set up, call the client. Tell them the referral has been sent and the meal provider will contact them to arrange the 30% payable fee. Send them the brochure if you have it.</li>
+                <li>Advise the client to contact their Care Partner if they have any questions or issues.</li>
+                <li>Edit the task:
+                  <ul>
+                    <li><strong>Action:</strong> Referral sent to meal provider.</li>
+                    <li><strong>Outcome:</strong> Spoke to (client name) to notify the meal delivery service has been set up. Care Partner, please update the budget tool.</li>
+                  </ul>
+                </li>
+                <li>Reassign the task to the <strong>Care Partner</strong>.</li>
+              </ul>
+            </li>
+            <li><strong>Care Partner</strong>
+              <ul>
+                <li><span class="field-highlight">Add the meal provider and monthly limit to the client&rsquo;s budgeting tool.</span></li>
+                <li>Mark the task complete.</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </div>
     </div>
   </div>
 
