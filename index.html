@@ -810,13 +810,15 @@
     </div>
     <div class="template-body" data-template>
       <div class="field"><span class="field-label">SERVICE REQUIRED:</span> <span class="field-hint">Gardening maintenance / Pruning / Gardening tidy up</span></div>
-      <div class="field"><span class="field-label">SERVICE OR QUOTE REQUIRED:</span> <span class="field-hint">Service / Quote</span></div>
-      <div class="field"><span class="field-label">FREQUENCY:</span> <span class="field-hint">Once off / Ongoing (weekly, fortnightly, monthly)</span></div>
-      <div class="field"><span class="field-label">HOURS PER VISIT:</span></div>
-      <div class="field"><span class="field-label">PRICE LIMIT:</span> <span class="field-hint">$ per hour (if applicable)</span></div>
-      <div class="field"><span class="field-label">PREFERRED PROVIDER:</span> <span class="field-hint">(if known, name and contact details)</span></div>
-      <div class="field"><span class="field-label">CLIENT PREFERENCES:</span></div>
+      <div class="field"><span class="field-label">SERVICE OR QUOTATION REQUIRED:</span></div>
+      <div class="field"><span class="field-label">CLIENT&rsquo;S PREFERRED GARDENER:</span> <span class="field-hint">(only if the client has their own gardener or wants a specific one. Include name and contact details)</span></div>
+      <div class="field"><span class="field-label">FREQUENCY:</span> <span class="field-hint">Weekly / Fortnightly / Monthly / Once off</span></div>
+      <div class="field"><span class="field-label">HOURS PER SERVICE:</span></div>
+      <div class="field"><span class="field-label">PREFERRED DAYS / TIMES:</span> <span class="field-hint">(as applicable)</span></div>
+      <div class="field"><span class="field-label">START DATE:</span> <span class="field-hint">(as applicable)</span></div>
       <div class="field"><span class="field-label">BUDGET CHECKED:</span> <span class="field-hint">Yes / No</span></div>
+      <div class="field"><span class="field-label">CLIENT PREFERENCES:</span></div>
+      <div class="field"><span class="field-label">PROVIDER NEEDS TO KNOW:</span> <span class="field-hint">(as applicable, e.g. dog on site, locked side gate, green waste removal)</span></div>
       <div class="field"><span class="field-label">CLIENT AWARE OF CO-CONTRIBUTION:</span> <span class="field-hint">Yes / No</span></div>
       <div class="field"><span class="field-label">CLIENT AWARE OF CHARGE STRUCTURE:</span> <span class="field-hint">Yes / No</span></div>
       <div class="field"><span class="field-label">CONTACT PERSON FOR CLIENT:</span></div>
@@ -842,34 +844,63 @@
                 <li>Complete the template and assign to the <strong>Compliance / Service Coordination Team</strong>.</li>
               </ul>
             </li>
-            <li><strong>Compliance / Service Coordination Team</strong>
+            <li><strong>Compliance / Service Coordination Team</strong>: find the gardener
               <ul>
-                <li>Find a provider. If a preferred provider was given or one is already onboarded, view their VC profile. If not, search VC for onboarded gardening providers in the client&rsquo;s area.</li>
-                <li>If no suitable provider is onboarded: find one and raise an <strong>Onboarding Request (Service Provider)</strong> task and assign it to the <strong>HR Team</strong>. Make sure their rate is no more than <strong>80%</strong> of our price list. Continue with the steps below only once the provider is onboarded.</li>
-                <li><strong>Quote only:</strong> get the quote from the provider, record it in the comments section of the task, and reassign the task to the <strong>Care Partner</strong>. The Care Partner confirms the price with the client and reassigns the task back to go ahead. Read their comments carefully before booking.</li>
-                <li>Email the provider to set up the service and provide:
+                <li><strong>Care Partner named a gardener:</strong>
                   <ul>
-                    <li>service instructions (once off or ongoing, frequency) and hours allocated</li>
-                    <li>client name</li>
-                    <li>address</li>
-                    <li>contact phone number</li>
+                    <li><strong>Already onboarded:</strong> go to step 3 if a quote is required, otherwise step 4.</li>
+                    <li><strong>Not onboarded:</strong> raise an <strong>Onboarding Request (Service Provider)</strong> to the <strong>HR Team</strong>. If a quote is required, get the quote first and only onboard once the client agrees.</li>
+                  </ul>
+                </li>
+                <li><strong>No gardener named:</strong>
+                  <ul>
+                    <li>Search VC for onboarded gardening providers in the client&rsquo;s area. If you find one, go to step 3 if a quote is required, otherwise step 4.</li>
+                    <li><strong>None found:</strong> raise a <strong>Recruitment Request (Service Provider)</strong> to the <strong>HR Team</strong>.
+                      <ul>
+                        <li><strong>Quote required:</strong> mark QUOTE REQUIRED: Yes. Recruitment will send you the quote without onboarding. Go to step 3.</li>
+                        <li><strong>No quote required:</strong> mark QUOTE REQUIRED: No. Recruitment will onboard and send you the name and rate. Go to step 4.</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><strong>Compliance / Service Coordination Team</strong>: quote (if required)
+              <ul>
+                <li>If you don&rsquo;t have the quote yet (onboarded or named gardener), request it from the provider.</li>
+                <li>Provide the quote to the <strong>Care Partner</strong> by reassigning this task.</li>
+                <li>The Care Partner confirms the price with the client and reassigns the task back to you. Read the comments carefully.</li>
+                <li>If the client agrees and the provider isn&rsquo;t onboarded yet:
+                  <ul>
+                    <li><strong>Sourced by Recruitment:</strong> let the <strong>Recruitment Team</strong> know to go ahead with onboarding.</li>
+                    <li><strong>Named by the Care Partner:</strong> raise an <strong>Onboarding Request (Service Provider)</strong> to the <strong>HR Team</strong>.</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><strong>Compliance / Service Coordination Team</strong>: set up the service (once the provider is onboarded)
+              <ul>
+                <li>View the provider&rsquo;s VC profile and email them to set up the service with:
+                  <ul>
+                    <li>service instructions as per the template (once off or ongoing, frequency, hours allocated)</li>
+                    <li>client name, address and contact phone number</li>
                     <li>Esse Care or EnableU nominated as payee</li>
                   </ul>
                 </li>
                 <li>Tell the provider:
                   <ul>
                     <li>the service must be charged on an <strong>hourly basis</strong>, showing the number of hours and price per hour</li>
-                    <li>any change to the work instructions must be agreed <strong>in writing before</strong> the service. Otherwise, invoices may be rejected.</li>
+                    <li>any variation to the work instructions must be communicated <strong>in writing before</strong> the service; otherwise invoices may be rejected</li>
                     <li>invoices must be sent to <a href="mailto:invoices@essecare.com.au">invoices@essecare.com.au</a> or <a href="mailto:invoices@enableu.com.au">invoices@enableu.com.au</a></li>
                   </ul>
                 </li>
                 <li>Add the pricing and any other service information to the provider&rsquo;s VC profile for future use.</li>
-                <li>Contact the client to confirm the service has been arranged: when, and who the provider is.</li>
+                <li>Contact the client to confirm the service is arranged, including when it is and who the provider is.</li>
                 <li>Advise the client to contact their Care Partner if they have any questions or issues.</li>
                 <li>Edit the task:
                   <ul>
-                    <li><strong>Action:</strong> Service booked &ndash; pricing particulars (e.g. 2 hours @ $75 per hour, monthly. First service booked for Thursday 30.07 at midday with Jim&rsquo;s Mowing).</li>
-                    <li><strong>Outcome:</strong> Spoke to (client name) to notify the first service has been booked for Thursday 30.07 at midday with Jim&rsquo;s Mowing, and ongoing each month. Care Partner, please update the budget tool.</li>
+                    <li><strong>Action:</strong> Service booked, with pricing (e.g. 2 hrs @ $75/hr per month). First service booked for (date and time) with (provider).</li>
+                    <li><strong>Outcome:</strong> Spoke to (client name) to notify the first service has been booked for (date and time) with (provider) and ongoing each (frequency). Care Partner, please update the budget tool.</li>
                   </ul>
                 </li>
                 <li>Reassign the task to the <strong>Care Partner</strong>.</li>
@@ -877,7 +908,7 @@
             </li>
             <li><strong>Care Partner</strong>
               <ul>
-                <li><span class="field-highlight">Add the gardening provider, rate and frequency to the client&rsquo;s budgeting tool.</span></li>
+                <li><span class="field-highlight">Add the provider, rate and frequency to the client&rsquo;s budgeting tool.</span></li>
                 <li>Mark the task complete.</li>
               </ul>
             </li>
