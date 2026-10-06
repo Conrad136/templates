@@ -394,6 +394,14 @@
       list-style: disc;
     }
 
+    .template-body .field-heading {
+      margin-top: 14px;
+      padding-bottom: 2px;
+      border-bottom: 1px solid #e8e8e8;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+    }
+
     .field-highlight {
       background: #fff176;
       padding: 1px 4px;
@@ -484,6 +492,12 @@
     <h2>Recruitment Templates</h2>
     <div class="nav-links">
       <a href="#recruitment-request">Recruitment Request</a>
+    </div>
+  </div>
+  <div class="nav-row">
+    <h2>HR Templates</h2>
+    <div class="nav-links">
+      <a href="#worker-feedback-call">Worker Feedback Call</a>
     </div>
   </div>
 </div>
@@ -1562,6 +1576,57 @@
                 <li>any other relevant details (e.g. contact details, availability, start date)</li>
               </ul>
             </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 22. Worker Feedback Call -->
+  <div class="template-card" id="worker-feedback-call">
+    <div class="template-header">
+      <h3>Worker Feedback Call</h3>
+      <button class="copy-btn" onclick="copyTemplate(this)">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+        <span>Copy</span>
+      </button>
+    </div>
+    <div class="template-body" data-template>
+      <div class="field"><span class="field-label">SPOKE WITH:</span> <span class="field-hint">Client / Representative (name and relationship)</span></div>
+      <div class="field"><span class="field-label">WORKER(S) DISCUSSED:</span></div>
+      <div class="field field-heading"><span class="field-label">ATTENDANCE</span></div>
+      <div class="field"><span class="field-label">Does the worker arrive on time:</span></div>
+      <div class="field"><span class="field-label">Do they stay for the full shift:</span></div>
+      <div class="field"><span class="field-label">Has anyone not turned up without the office letting you know:</span></div>
+      <div class="field field-heading"><span class="field-label">QUALITY OF CARE</span></div>
+      <div class="field"><span class="field-label">Do they do the tasks you need help with:</span></div>
+      <div class="field"><span class="field-label">Is anything being missed or rushed:</span></div>
+      <div class="field"><span class="field-label">Do they use their phone during the shift for personal matters:</span></div>
+      <div class="field field-heading"><span class="field-label">CONDUCT AND SAFETY</span></div>
+      <div class="field"><span class="field-label">Are they respectful and easy to communicate with:</span></div>
+      <div class="field"><span class="field-label">Has anything made you feel uncomfortable or unsafe:</span></div>
+      <div class="field field-heading"><span class="field-label">CLOSE</span></div>
+      <div class="field"><span class="field-label">Overall, how happy are you with your support (1 to 5):</span></div>
+      <div class="field"><span class="field-label">Is there anything you would like us to change:</span></div>
+      <div class="field"><span class="field-label">Office number given for any future concerns:</span> <span class="field-hint">Yes / No</span></div>
+      <div class="section-note">ASSIGN TO: N/A</div>
+      <div class="important-section">
+        <button class="important-toggle" onclick="toggleImportant(this)">
+          <span class="chevron">&#9654;</span> Important (Please Read)
+        </button>
+        <div class="important-content">
+          <ul>
+            <li>Select the note category <strong>Worker Feedback (HR)</strong> and document under the relevant client.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="workflow-section">
+        <button class="workflow-toggle" onclick="toggleImportant(this)">
+          <span class="chevron">&#9654;</span> Workflow
+        </button>
+        <div class="workflow-content">
+          <ul>
+            <li>Call <strong>5 to 10 clients each week</strong> across Sydney and Melbourne and go through these questions with them.</li>
           </ul>
         </div>
       </div>
