@@ -417,12 +417,6 @@
     </div>
   </div>
   <div class="nav-row">
-    <h2>Recruitment Templates</h2>
-    <div class="nav-links">
-      <a href="#recruitment-request">Recruitment Request</a>
-    </div>
-  </div>
-  <div class="nav-row">
     <h2>Intake Templates</h2>
     <div class="nav-links">
       <a href="#intake-checklist">Intake Checklist (SAH)</a>
@@ -481,6 +475,12 @@
       <a href="#shift-cancellation">Shift Cancellation</a>
     </div>
   </div>
+  <div class="nav-row">
+    <h2>Recruitment Templates</h2>
+    <div class="nav-links">
+      <a href="#recruitment-request">Recruitment Request</a>
+    </div>
+  </div>
 </div>
 
 <!-- Templates -->
@@ -518,75 +518,6 @@
             <li>Complaints should be acknowledged within <strong>2 days</strong> and closed off before <strong>28 days</strong>. Update the complainant at least every <strong>14 days</strong> if not resolved by 28 days.</li>
             <li>If an incident is described, lodge the incident form as well and mark &ldquo;Yes&rdquo; above.</li>
             <li>Close the complaint only once the client is satisfied with the outcome, or has been told the outcome and their options if they are not. Record this in the trail before marking complete.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 0b. Recruitment Request -->
-  <div class="template-card" id="recruitment-request">
-    <div class="template-header">
-      <h3>Recruitment Request</h3>
-      <button class="copy-btn" onclick="copyTemplate(this)">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
-        <span>Copy</span>
-      </button>
-    </div>
-    <div class="template-body" data-template>
-      <div class="field"><span class="field-label">REQUEST TYPE:</span> <span class="field-hint">Employee / Service Provider</span></div>
-      <div class="field"><span class="field-label">SERVICE / ROLE:</span> <span class="field-hint">(e.g. support work, nursing, cleaning, gardening)</span></div>
-      <div class="field"><span class="field-label">QUOTE REQUIRED:</span> <span class="field-hint">Yes / No</span></div>
-      <div class="field"><span class="field-label">DUTIES / SCOPE OF WORK:</span></div>
-      <div class="field"><span class="field-label">SERVICE DAYS:</span></div>
-      <div class="field"><span class="field-label">SERVICE TIMES:</span> <span class="field-hint">(as applicable, start and finish)</span></div>
-      <div class="field"><span class="field-label">FREQUENCY:</span> <span class="field-hint">Weekly / Fortnightly / Monthly / Once off</span></div>
-      <div class="field"><span class="field-label">START DATE:</span> <span class="field-hint">(as applicable)</span></div>
-      <div class="field"><span class="field-label">URGENT:</span> <span class="field-hint">Yes / No</span></div>
-      <div class="field"><span class="field-label">DRIVING REQUIRED:</span> <span class="field-hint">Yes / No (licence, own car, transporting client)</span></div>
-      <div class="field"><span class="field-label">CLIENT PREFERENCES:</span> <span class="field-hint">(gender, language, cultural)</span></div>
-      <div class="field"><span class="field-label">CANDIDATE MUST HAVE:</span> <span class="field-hint">(as applicable, e.g. speaks Greek, Cert III, manual handling experience, own gardening equipment)</span></div>
-      <div class="field"><span class="field-label">CANDIDATE NEEDS TO KNOW:</span> <span class="field-hint">(as applicable, e.g. dog on site, client smokes, hoist transfers, verbal aggression)</span></div>
-      <div class="section-note">ASSIGN TO: HR Team</div>
-      <div class="workflow-section">
-        <button class="workflow-toggle" onclick="toggleImportant(this)">
-          <span class="chevron">&#9654;</span> Workflow (Recruitment Team Only)
-        </button>
-        <div class="workflow-content">
-          <p class="workflow-text"><span class="field-highlight">This workflow is for the Recruitment Team once they receive this task.</span></p>
-
-          <h4 class="workflow-subheading">Quote required</h4>
-          <ul>
-            <li>Get the quote and provide it to the <strong>Service Coordination Team</strong>.</li>
-            <li>Service Coordination will update you if the provider is to be onboarded.</li>
-          </ul>
-
-          <h4 class="workflow-subheading">Employees</h4>
-          <ul>
-            <li>Onboard if the pay is within the negotiation levels on the <strong>pay matrix</strong>.</li>
-            <li>If the candidate asks for more, escalate to <strong>Conrad</strong>.</li>
-          </ul>
-
-          <h4 class="workflow-subheading">Service providers</h4>
-          <ul>
-            <li>Onboard if the rate is no more than <strong>80%</strong> of our standard rates:
-              <ul>
-                <li><strong>SAH (EnableU):</strong> OneDrive &gt; ENABLEU &gt; Service SAH &gt; Home Care Templates (EnableU) &gt; SAH Intake Folder &gt; <em>SAH EnableU Service Pricing Schedule</em> (use the latest version).</li>
-                <li><strong>SAH (Esse Care):</strong> OneDrive &gt; ENABLEU &gt; Service SAH &gt; Forms and Templates (Esse Care) &gt; ADMISSION AND NURSING ASSESSMENT FORMS &gt; SAH Intake Folder [COPY ME, DO NOT EDIT FILES HERE] &gt; <em>SAH Esse Care Service Pricing Schedule</em> (use the latest version).</li>
-                <li><strong>NDIS:</strong> NDIS Pricing Arrangements and Price Limits at <a href="https://www.ndis.gov.au/providers/pricing-and-payments/pricing/pricing-arrangements" target="_blank" rel="noopener">ndis.gov.au/providers/pricing-and-payments/pricing/pricing-arrangements</a>.</li>
-              </ul>
-            </li>
-            <li>If the rate is above 80%, get approval from <strong>Maria</strong> (SAH) or <strong>Harry</strong> (NDIS) before onboarding.</li>
-          </ul>
-
-          <h4 class="workflow-subheading">Once onboarded</h4>
-          <ul>
-            <li>Reassign the task to the <strong>Service Coordination Team</strong> with a comment that includes:
-              <ul>
-                <li>the name of the employee or service provider</li>
-                <li>the rate</li>
-              </ul>
-            </li>
           </ul>
         </div>
       </div>
@@ -1245,6 +1176,85 @@
             <li>If we are charging the client when a &lsquo;leave&rsquo; is applied to a shift, the system only allows us to set the cancellation charge percentage. This can only be set as <strong>0 or 1</strong>. We do not use partial cancellation charges (e.g. 80% as 0.8).</li>
             <li>There is currently no option to adjust the number of chargeable hours within the system for shifts marked with &lsquo;leave&rsquo;. For example, if a 4-hour shift is considered a late cancellation and the client is being charged, the system will automatically apply the charge for the <strong>full 4 hours</strong>.</li>
             <li>If we need to charge a different number of hours (e.g. charge 2 hours instead of 4 hours), you <strong>MUST</strong> leave a note in the <strong>&ldquo;Office Note&rdquo;</strong> column in the VC Timesheet tab for that specific shift. Accounts will then review and manually update the charge accordingly.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 21. Recruitment Request -->
+  <div class="template-card" id="recruitment-request">
+    <div class="template-header">
+      <h3>Recruitment Request</h3>
+      <button class="copy-btn" onclick="copyTemplate(this)">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+        <span>Copy</span>
+      </button>
+    </div>
+    <div class="template-body" data-template>
+      <div class="field"><span class="field-label">REQUEST TYPE:</span> <span class="field-hint">Employee / Service Provider</span></div>
+      <div class="field"><span class="field-label">SERVICE / ROLE:</span> <span class="field-hint">(e.g. support work, nursing, cleaning, gardening)</span></div>
+      <div class="field"><span class="field-label">QUOTE REQUIRED:</span> <span class="field-hint">Yes / No</span></div>
+      <div class="field"><span class="field-label">DUTIES / SCOPE OF WORK:</span></div>
+      <div class="field"><span class="field-label">SERVICE DAYS:</span></div>
+      <div class="field"><span class="field-label">SERVICE TIMES:</span> <span class="field-hint">(as applicable, start and finish)</span></div>
+      <div class="field"><span class="field-label">FREQUENCY:</span> <span class="field-hint">Weekly / Fortnightly / Monthly / Once off</span></div>
+      <div class="field"><span class="field-label">START DATE:</span> <span class="field-hint">(as applicable)</span></div>
+      <div class="field"><span class="field-label">URGENT:</span> <span class="field-hint">Yes / No</span></div>
+      <div class="field"><span class="field-label">DRIVING REQUIRED:</span> <span class="field-hint">Yes / No (licence, own car, transporting client)</span></div>
+      <div class="field"><span class="field-label">CLIENT PREFERENCES:</span> <span class="field-hint">(gender, language, cultural)</span></div>
+      <div class="field"><span class="field-label">CANDIDATE MUST HAVE:</span> <span class="field-hint">(as applicable, e.g. speaks Greek, Cert III, manual handling experience, own gardening equipment)</span></div>
+      <div class="field"><span class="field-label">CANDIDATE NEEDS TO KNOW:</span> <span class="field-hint">(as applicable, e.g. dog on site, client smokes, hoist transfers, verbal aggression)</span></div>
+      <div class="section-note">ASSIGN TO: HR Team</div>
+      <div class="important-section">
+        <button class="important-toggle" onclick="toggleImportant(this)">
+          <span class="chevron">&#9654;</span> Important (Please Read)
+        </button>
+        <div class="important-content">
+          <ul>
+            <li>Select the category <strong>Recruitment Request</strong>.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="workflow-section">
+        <button class="workflow-toggle" onclick="toggleImportant(this)">
+          <span class="chevron">&#9654;</span> Workflow (Recruitment Team Only)
+        </button>
+        <div class="workflow-content">
+          <p class="workflow-text"><span class="field-highlight">This workflow is for the Recruitment Team once they receive this task.</span></p>
+
+          <h4 class="workflow-subheading">Quote required</h4>
+          <ul>
+            <li>Get the quote and provide it to the <strong>Service Coordination Team</strong>.</li>
+            <li>Service Coordination will update you if the provider is to be onboarded.</li>
+          </ul>
+
+          <h4 class="workflow-subheading">Employees</h4>
+          <ul>
+            <li>Onboard if the pay is within the negotiation levels on the <strong>pay matrix</strong>.</li>
+            <li>If the candidate asks for more, escalate to <strong>Conrad</strong>.</li>
+          </ul>
+
+          <h4 class="workflow-subheading">Service providers</h4>
+          <ul>
+            <li>Onboard if the rate is no more than <strong>80%</strong> of our standard rates:
+              <ul>
+                <li><strong>SAH (EnableU and Esse Care):</strong> OneDrive &gt; ENABLEU &gt; Service SAH &gt; Home Care Templates (EnableU) &gt; SAH Intake Folder &gt; <em>SAH EnableU Service Pricing Schedule</em> (use the latest version). Esse Care uses the same price list.</li>
+                <li><strong>NDIS:</strong> NDIS Pricing Arrangements and Price Limits at <a href="https://www.ndis.gov.au/providers/pricing-and-payments/pricing/pricing-arrangements" target="_blank" rel="noopener">ndis.gov.au/providers/pricing-and-payments/pricing/pricing-arrangements</a>.</li>
+              </ul>
+            </li>
+            <li>If the rate is above 80% of the price list, get approval from <strong>Maria</strong> (SAH) or <strong>Harry</strong> (NDIS) before onboarding.</li>
+          </ul>
+
+          <h4 class="workflow-subheading">Once onboarded</h4>
+          <ul>
+            <li>Reassign the task to the <strong>Service Coordination Team</strong> with a comment confirming <strong>onboarding is completed</strong>, and include:
+              <ul>
+                <li>the name of the employee or service provider</li>
+                <li>the rate</li>
+                <li>any other relevant details (e.g. contact details, availability, start date)</li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
