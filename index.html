@@ -523,6 +523,24 @@
 <!-- Templates -->
 <div class="templates-container">
 
+  <!-- TEST: paste spacing (delete after testing) -->
+  <div class="template-card" id="test-spacing">
+    <div class="template-header">
+      <h3>TEST - Paste Spacing (delete after testing)</h3>
+      <button class="copy-btn" onclick="copyTemplateSpaced(this)">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+        <span>Copy</span>
+      </button>
+    </div>
+    <div class="template-body" data-template>
+      <div class="field"><span class="field-label">FRUIT:</span> <span class="field-hint">(e.g. apple, banana, mango)</span></div>
+      <div class="field"><span class="field-label">FAVOURITE COLOUR:</span></div>
+      <div class="field"><span class="field-label">NUMBER OF CATS:</span> <span class="field-hint">(e.g. 2 / none)</span></div>
+      <div class="field"><span class="field-label">WEATHER TODAY:</span> Sunny / Cloudy / Rainy</div>
+      <div class="field"><span class="field-label">CONTACT PERSON:</span> <span class="field-hint">(if not the client)</span></div>
+    </div>
+  </div>
+
   <!-- 0. Complaint -->
   <div class="template-card" id="complaint">
     <div class="template-header">
@@ -1781,6 +1799,40 @@
         span.textContent = 'Copy';
       }, 2000);
     });
+  }
+
+  // TEST: copies each line as its own paragraph (HTML) plus a blank-line plain text fallback
+  function copyTemplateSpaced(btn) {
+    const body = btn.closest('.template-card').querySelector('[data-template]');
+    const lines = [];
+    body.querySelectorAll('.field').forEach(field => {
+      const label = field.querySelector('.field-label');
+      const hint = field.querySelector('.field-hint');
+      let line = label ? label.textContent : '';
+      if (hint) line += ' ' + hint.textContent;
+      else {
+        const extra = field.textContent.replace(label ? label.textContent : '', '').trim();
+        if (extra) line += ' ' + extra;
+      }
+      lines.push(line);
+    });
+    const esc = t => t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    const html = lines.map(l => '<p>' + esc(l) + '</p>').join('');
+    const text = lines.join('\n\n');
+    const done = () => {
+      const span = btn.querySelector('span');
+      btn.classList.add('copied');
+      span.textContent = 'Copied!';
+      setTimeout(() => { btn.classList.remove('copied'); span.textContent = 'Copy'; }, 2000);
+    };
+    if (window.ClipboardItem) {
+      navigator.clipboard.write([new ClipboardItem({
+        'text/html': new Blob([html], { type: 'text/html' }),
+        'text/plain': new Blob([text], { type: 'text/plain' })
+      })]).then(done).catch(() => navigator.clipboard.writeText(text).then(done));
+    } else {
+      navigator.clipboard.writeText(text).then(done);
+    }
   }
 
   function toggleImportant(btn) {
